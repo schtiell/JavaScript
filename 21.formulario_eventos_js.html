@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario y Eventos con JavaScript</title>
+</head>
+<body>
+	<h1>Formulario y Eventos con JavaScript</h1>
+
+	<p>El uso de Javascript en los formularios HTML se hace fundamentalmente con el objetivo de validar los datos ingresados. Se hace esta actividad en el cliente (navegador) para desligar de esta actividad al servidor que recibirá los datos ingresados por el usuario. </p>
+
+	<p>Esta posibilidad de hacer pequeños programas que se ejecutan en el navegador, evitan intercambios innecesarios entre el cliente y el servidor (navegador y sitio web).
+
+	<p>Suponemos que conoce las etiquetas HTML para la creación de formularios en una página web:</p>
+
+	<ul>
+		<li>form form ... /form</li>
+		<li>text input type="text"</li>
+		<li>password input type="password"</li>
+		<li>textarea textarea ... /textarea</li>
+		<li>button input type="button"</li>
+		<li>submit input type="submit"</li>
+		<li>reset input type="reset"</li>
+		<li>checkbox input type="checkbox"</li>
+		<li>radio input type="radio"</li>
+		<li>select select ... /select</li>
+		<li>hidden input type="hidden"</li>
+	</ul>
+	
+	<p>El navegador crea un objeto por cada control visual que aparece dentro de la página. Nosotros podemos acceder posteriormente desde JavaScript a dichos objetos.</p>
+
+	<p>El objeto principal es el FORM que contendrá todos los otros objetos: TEXT (editor de líneas), TEXTAREA (editor de varias líneas), etc.</p>
+
+	<p>Nuestra actividad en JavaScript es procesar los eventos que generan estos controles (un evento es una acción que se dispara, por ejemplo si se presiona un botón).</p>
+	
+
+	<p><strong>Ejemplo: Dispondremos un botón y cada vez que se presione, mostraremos un contador.</strong></p>
+
+  	
+  	<form action="">
+  			
+  		<input type="button" value="incrementar" onclick="incrementar()">
+
+
+  	</form>
+  	
+
+  	<p>A los eventos de los objetos HTML se les asocia una función, dicha función se ejecuta cuando se dispara el evento respectivo. En este caso cada vez que presionamos el botón, se llama a la función incrementar, en la misma incrementamos la variable contador en uno. Hay que tener en cuenta que a la variable contador la definimos fuera de la función para que no se inicialice cada vez que se dispara el evento.</p>
+
+	<p>La función alert crea una ventana que puede mostrar un mensaje.</p>
+
+  	<script>
+  		
+  		var contador = 0;
+
+		function incrementar () {
+			
+			contador++;
+			alert('El valor del contador es: ' + contador);
+
+		}
+
+  	</script>
+  	
+</body>
+</html>
