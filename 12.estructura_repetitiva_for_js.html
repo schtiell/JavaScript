@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructura repetitiva for </title>
+</head>
+<body>
+
+	<section>
+		<div>
+
+			<h1>Estructura repetitiva (for)</h1>
+
+			<p>Cualquier problema que requiera una estructura repetitiva se puede resolver empleando la estructura while. Pero hay otra estructura repetitiva cuyo planteo es más sencillo en ciertas situaciones.</p>
+
+			<p>Esta estructura se emplea en aquellas situaciones en las cuales CONOCEMOS la cantidad de veces que queremos que se ejecute el bloque de instrucciones. Ejemplo: cargar 10 números, ingresar 5 notas de alumnos, etc. Conocemos de antemano la cantidad de veces que queremos que el bloque se repita.</p>
+
+			<p>Por último, hay que decir que la ejecución de la sentencia break dentro de cualquier parte del bucle provoca la salida inmediata del mismo.</p>
+			
+			<p>Sintaxis:
+
+					for (Inicialización ; Condición ; Incremento o Decremento) <br>
+					{ <br>
+					  Instrucciones <br>
+					} </p>
+
+			<p>Esta estructura repetitiva tiene tres argumentos: variable de inicialización, condición y variable de incremento o decremento.</p>
+
+			<p>Funcionamiento:</p>
+
+			<ol>
+				<li>Primero se ejecuta por única vez el primer argumento <Inicialización>. Por lo general se inicializa una variable.</li>
+				<li>El segundo paso es evaluar la (Condición), en caso de ser verdadera se ejecuta el bloque, en caso contrario continúa el programa.</li>
+				<li>El tercer paso es la ejecución de las instrucciones.</li>
+				<li>El cuarto paso es ejecutar el tercer argumento (Incremento o Decremento).</li>
+				<li>Luego se repiten sucesivamente del Segundo al Cuarto Paso.</li>
+			</ol>
+
+			<p>Este tipo de estructura repetitiva se utiliza generalmente cuando sabemos la cantidad de veces que deseamos que se repita el bloque.</p>
+
+			<p><strong>Ejemplo</strong></p>
+
+			<p>Realizar un programa que lea los lados de 4 triángulos, e informar:</p>
+
+			<ul>
+				<li>De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales), isósceles (dos lados iguales), o escaleno (ningún lado igual)</li>
+				<li>Cantidad de triángulos de cada tipo.</li>
+				<li>Tipo de triángulo del que hay menor cantidad.</li>
+			</ul>
+
+		</div>
+
+		<div>
+
+			<script>
+				
+				function triangulos(){
+
+					var t_escaleno = 0;
+					var t_isoseles = 0;
+					var t_equilatero = 0;
+
+					for (var i = 0; i <2; i++) {
+						
+						var lado_a = parseInt(prompt('Medida del lado A del triángulo ' +i));
+						var lado_b = parseInt(prompt('Medida del lado B del triángulo '  +i));
+						var lado_c = parseInt(prompt('Medida del lado C del triángulo'  +i));
+
+						if(lado_a == lado_b && lado_a == lado_c && lado_b == lado_c){
+
+							t_equilatero = t_equilatero + 1;
+							
+
+						}else if(lado_a != lado_b && lado_a != lado_c && lado_b != lado_c) {
+							t_escaleno = t_escaleno +1;
+							
+
+						}else if(lado_a == lado_b && lado_a != lado_c){
+
+							t_isoseles = t_isoseles + 1;
+							
+							
+						}else if(lado_a != lado_b && lado_b == lado_c)
+
+							t_isoseles = t_isoseles + 1;
+					}
+
+					document.write('La cantidad de triangulos es: ' + '<br>');
+					document.write('Equilatero: ' + t_equilatero + '<br>');
+					document.write('Escaleno: ' + t_escaleno + '<br>');
+					document.write('Isoseles: ' + t_isoseles + '<br>');
+
+				}
+
+				triangulos();
+
+			</script>
+			
+		</div>
+
+	</section>
+	
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Return de una función</title>
+</head>
+<body>
+		
+	<section>
+
+		<div id="body">
+
+			<h1>Funciones que retornan un valor</h1>
+			<p>Son comunes los casos donde una función, luego de hacer un proceso, retorne un valor.</p>
+			<p> Cuando se llama a la función, debemos asignar el nombre de la función a una variable, ya que la misma retorna un valor.</p>
+
+			<p>Una función puede tener varios parámetros, pero sólo puede retornar un único valor.</p>
+
+			<p><strong>Ejemplo: Desarrollar una función que retorne la cantidad de dígitos que tiene una variable entera positiva de hasta 5 dígitos.</strong></p>
+		</div>
+
+		<div id="js">
+
+			<script>
+				
+				//Funcion que recibe un parametro
+				function longitudCifra(numero){
+
+					var contador = 0;
+
+					var cifra = numero.length;
+
+
+					for (var i = 1; i<=cifra; i++){
+
+						contador += 1;
+
+					}	
+
+					return 'La longitud es: ' + contador;
+					
+				}
+
+
+				var numero = prompt('Numero a analizar');
+
+				//Se declara la variable que contendrá el valor retornado por la función
+				var resultado = longitudCifra(numero);
+
+				document.write(resultado);
+				
+			</script>
+
+		</div>
+
+	</section>
+
+</body>
+</html>

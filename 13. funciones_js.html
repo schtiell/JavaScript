@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones en Javascript</title>
+</head>
+<body>
+	<section>
+		<div id="body">
+
+			<h1>Funciones JavaScript</h1>
+
+			<p>En programación es muy frecuente que un determinado procedimiento de cálculo definido por un grupo de sentencias tenga que repetirse varias veces, ya sea en un mismo programa o en otros programas, lo cual implica que se tenga que escribir tantos grupos de aquellas sentencias como veces aparezca dicho proceso.</p>
+
+			<p>La herramienta más potente con que se cuenta para facilitar, reducir y dividir el trabajo en programación, es escribir aquellos grupos de sentencias una sola y única vez bajo la forma de una FUNCION.</p>
+
+			<p>Un programa es una cosa compleja de realizar y por lo tanto es importante que esté bien ESTRUCTURADO y también que sea inteligible para las personas. Si un grupo de sentencias realiza una tarea bien definida, entonces puede estar justificado el aislar estas sentencias formando una función, aunque resulte que sólo se le llame o use una vez.</p>
+			Con funciones podemos segmentar un programa en varias partes.
+
+			<p>Frente a un problema, planteamos un algoritmo, éste puede constar de pequeños algoritmos.</p>
+
+			<p>Una función es un conjunto de instrucciones que resuelven una parte del problema y que puede ser utilizado (llamado) desde diferentes partes de un programa.
+			Consta de un nombre y parámetros.</p>
+
+			<p>Con el nombre llamamos a la función, es decir, hacemos referencia a la misma.
+			Los parámetros son valores que se envían y son indispensables para la resolución del mismo.
+			La función realizará alguna operación con los parámetros que le enviamos. Podemos cargar una variable, consultarla, modificarla, imprimirla, etc.</p>
+
+			<p>Incluso los programas más sencillos tienen la necesidad de fragmentarse. Las funciones son los únicos tipos de subprogramas que acepta JavaScript. Tienen la siguiente estructura:</p>
+			
+			<strong>
+			<p>function nombre de función(argumento1, argumento2, ..., argumento n)</p> 
+			<p>{</p> 
+			<p>código de la función</p> 
+			<p>}</p>
+			</strong>
+
+			<p>Debemos buscar un nombre de función que nos indique cuál es su objetivo (Si la función recibe un string y lo centra, tal vez deberíamos llamarla centrarTitulo). Veremos que una función puede variar bastante en su estructura, puede tener o no parámetros, retornar un valor, etc.</p>
+
+			<strong>Ejemplo: Confeccionar una función a la cual le envíe tres enteros y los muestre ordenados de menor a mayor.</strong>
+			
+		</div>
+	
+		<div id="js">
+
+			<script>
+				
+				function ordenarNumeros(num1,num2,num3){
+
+					if (num1 <= num2 && num1 <= num3){
+
+						if(num2 <= num3 ){
+
+							document.write('a: ' + num1,num2,num3);
+
+						}else {
+
+							document.write('b: ' + num1,num3,num2);
+
+						}
+
+					}else if (num2 <= num1 && num2 <= num3){
+
+						if(num1 <= num3){
+
+							document.write('c: ' + num2,num1,num3);
+
+						}else {
+
+							document.write('d: ' + num2,num3,num1);
+						}
+						
+					}else if (num3 <= num1 && num3<= num2){
+
+						if(num2<=num1){
+
+							document.write('e: ' + num3,num2,num1);
+
+						}else {
+
+								document.write('f: ' + num3,num1,num2);
+						}
+						
+					}
+
+				}
+
+				num1 = parseInt(prompt('Primer número:'));
+				num2 = parseInt(prompt('Segundo número:'));
+				num3 = parseInt(prompt('Terer número:'));
+
+				document.write('Tus secuencia de numeros es: ' + num1,num2,num3 + '<br>');
+				document.write('Tus numeros ordenados son: ');
+				ordenarNumeros(num1,num2,num3);
+				
+
+			</script>
+
+		</div>
+	</section>
+
+	
+</body>
+</html>

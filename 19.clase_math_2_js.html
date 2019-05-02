@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase Math JavaScript</title>
+</head>
+<body>
+	<h1>Clase Math JavaScript</h1>
+
+	<p><strong>Ejemplo 2:</strong></p>
+	<p>Confeccionar un programa que solicite el ingreso de un número y nos muestre dicho valor elevado a la tercera potencia.</p>
+
+	<script>
+		
+		function elevarPotencia (numero,potencia) {
+			
+			return Math.pow(numero,potencia);
+		}
+
+
+		var numero = parseInt(prompt('Que numero deseas elevar?'));
+		var potencia = parseInt(prompt('A que potencia?'));
+		var resultado;
+
+		document.write('El numero: ' + numero + ' elevado a la ' + potencia + ' es: ' + elevarPotencia(numero,potencia));
+
+	</script>
+	
+</body>
+</html>

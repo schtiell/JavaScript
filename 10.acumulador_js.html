@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Acumuladores Javascript</title>
+</head>
+<body>
+
+	<h1>Acumulador</h1>
+
+	<p>Se explicará el concepto de acumulador con un ejemplo</p>
+	<p>Escribir un programa que lea 10 notas de alumnos y nos informe cuántos aprobaron el curso de javascript, el cual se aprueba con la calificación mínima de 7.</p>
+		
+	<p>El acumulador es una varible declarada especialmente, la cual va acumulando (sumando y/o agregando) los valores que se le asignan</p>
+
+
+	<script>
+		
+		function calificacionesAlumnos(){
+
+			var alumnos = 1;
+			var sobresalientes = 0;
+
+			while(alumnos <= 10) {
+				
+				var calificacion_alumno = parseInt(prompt('Cual es la calificación del alumno'));
+
+				if (calificacion_alumno >= 7 ) {
+
+					//Acumulador...
+					sobresalientes+=1;
+
+				}
+
+				//contador...
+				alumnos +=1;
+			}
+
+			return sobresalientes;
+
+		}
+
+		document.write('Alumnos con calificaciones mayores a 7: ' + '<strong>' + calificacionesAlumnos() + '</strong>');
+			
+	</script>
+
+</body>
+</html>

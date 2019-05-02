@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase String</title>
+</head>
+<body>
+
+	<h1>Clase String</h1>
+
+	<p><strong>Ingresar una palabra o texto por teclado y determinar si es o no una palabra palíndromo. (Palabra que se lee de igual manera de adelante hacia atrás, que de atrás hacia delante)</strong></p>
+
+
+	<script>
+		
+		function palindromo (cadena) {
+			
+			var cadena_pal = '';
+
+			for (var i = 0; i < cadena.length; i++) {
+				
+				cadena_pal = cadena_pal + charAt(cadena.length-i-1); 
+			}
+
+			document.write(cadena_pal);
+
+		}
+
+		var cadena = prompt('Cual es la cadena: ');
+		palindromo(cadena);
+
+	</script>
+	
+</body>
+</html>

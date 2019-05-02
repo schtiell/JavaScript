@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manejo de la clase Date</title>
+</head>
+<body>
+	<section>
+		<div>
+			<h1>Manejo de la Clase Date POO</h1>
+
+			<p>JavaScript dispone de varias clases predefinidas para acceder a muchas de las funciones normales de cualquier lenguaje, como puede ser el manejo de vectores o el de fechas.</p>
+
+			<p>Esta clase nos permitirá manejar fechas y horas. Se invoca así:</p>
+			
+			<ul><li>fecha = new Date(); </li>
+				<li>fecha = new Date(año, mes, dia);</li>
+				<li>fecha = new Date(año, mes, dia, hora, minuto, segundo);</li>
+			</ul>
+	
+			<p>Si no utilizamos parámetros, el objeto fecha contendrá la fecha y hora actual, recuperadas del reloj de nuestra computadora. En caso contrario hay que tener en cuenta que los meses comienzan por cero. </p>
+
+			<p>fecha = new Date(año, mes, dia, hora, minuto, segundo);</p>
+
+		</div>
+
+		<div id="js">
+			
+			<script>
+				
+				function imprimirFecha() {
+					
+					var fecha;
+
+					//Instancia de la clase date.(Objeto)
+					fecha = new Date();
+
+					document.write('Hoy es: ');
+					document.write(fecha.getDate()+'/');
+					document.write(fecha.getMonth()+'/');
+					document.write(fecha.getFullYear()+'/');
+					document.write('<br>');
+
+				}
+
+
+				function imprimirHora() {
+
+					var fecha;
+
+					//Instancia de la clase
+					fecha = new Date();
+
+					document.write('La hora actual es: ');
+					document.write(fecha.getHours()+':');
+					document.write(fecha.getMinutes()+':');
+					document.write(fecha.getSeconds());
+					document.write('<br>');
+				}
+
+
+				function obtenerCuatrimestre() {
+					
+					var fecha;
+					fecha = new Date();
+					mes = fecha.getMonth();
+
+
+					if (mes < 4) {
+
+						return 'Estamos en el primer cuatrimestre del ' + fecha.getFullYear();
+
+					}else if(mes <8) {
+						
+						return 'Estamos en el segundo cuatrimestre del ' + fecha.getFullYear();
+					}else {
+
+						return 'Estamos en el tercer cuatrimestre del ' + fecha.getFullYear();
+					}
+
+
+				}
+
+
+				imprimirFecha();
+				imprimirHora();
+				document.write(obtenerCuatrimestre());
+
+			</script>
+
+		</div>
+
+
+
+	</section>
+	
+</body>
+</html>

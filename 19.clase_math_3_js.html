@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase Math</title>
+</head>
+<body>
+	<h1>Clase Math JavaScript</h1>
+
+	<p><strong>Ejemplo 3:</strong></p>
+	<p>Ingresar por teclado un valor y luego mostrar la raiz cuadrada de dicho valor</p>
+
+	<p>La función Math.sqrt() retorna la raíz cuadrada de un número</p>
+	<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/sqrt">Raíz Cuadrada</a></p>
+
+	<script>
+		
+		function raizCuadrada (numero) {
+				
+			return Math.sqrt(numero);
+
+		}	
+
+
+		var numero = parseInt(prompt('Numero para cálculo'));
+
+		if (numero > 0){
+
+			document.write('La raiz cuadrada de ' + numero + ' es: ' + raizCuadrada(numero));
+			
+		}else {
+
+			alert('No se puede realizar el calculo a 0 o numeros negativos');
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructuras condicionales compuestas</title>
+</head>
+<body>
+	
+	<h1>Obetener el mayor de 2 numeros</h1>	
+
+	<p>Cuando se presenta la elección tenemos la opción de realizar una actividad u otra. Es decir tenemos actividades por el verdadero y por el falso de la condición. Lo más importante que hay que tener en cuenta es que se realizan las actividades de la rama del verdadero o las del falso, NUNCA se realizan las actividades de las dos ramas.En una estructura condicional compuesta tenemos entradas, salidas, operaciones, tanto por la rama del verdadero como por la rama del falso.</p>
+
+	<script>
+		
+		function imprimirMayor(num1,num2){
+
+			if(num1>num2){
+
+				document.write('<strong>' + num1 + ' es mayor que: ' + num2 + '</strong>' );
+
+			}else{
+
+				document.write('<strong>' + num2  + ' es mayor que: ' + num1 + '</strong>') ;
+			}
+
+		}
+
+		var numero1 = parseInt(prompt('Teclea el primer numero: '));
+		var numero2 = parseInt(prompt('Teclea el segundo numero: '));
+
+		imprimirMayor(numero1,numero2);
+
+	</script>
+
+	<p>La función prompt retorna un string por lo que debemos convertirlo a entero cuando queremos saber cual de los dos valores es mayor numéricamente. En el lenguaje JavaScript una variable puede ir cambiando el tipo de dato que almacena a lo largo de la ejecución del programa.</p>
+
+</body>
+</html>

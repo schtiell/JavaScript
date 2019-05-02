@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase String</title>
+</head>
+<body>
+	<h1>Clase String JavaScript</h1>
+
+	<p>Un string consiste en uno o más caracteres encerrados entre simple o doble comillas.</p>
+	<p>Concatenación de cadenas (+):<br>
+	JavaScript permite concatenar cadenas utilizando el operador +.</p>
+	
+	<p>El siguiente fragmento de código concatena tres cadenas para producir su salida:<br>
+	var final='La entrada tiene ' + contador + ' caracteres.';</p>
+
+	<p>Dos de las cadenas concatenadas son cadenas literales. La del medio es un entero que automáticamente se convierte a cadena y luego se concatena con las otras.</p>
+	
+	<p>Existen diferentes tipos de metodos  para uso de cadenas, revisar el siguente enlace para mayor referencia</p>
+
+	<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String">Referencia Clase String JavaScript</a></p>
+
+	<p><a href="https://www.tutorialesprogramacionya.com/javascriptya/problemas/problema.php?cod=22&inicio=20">Ejercicios Strings</a></p>
+	
+	<strong>Ejemplo: Cargar un String por teclado e implementar las siguientes funciones: </strong> 
+
+	<ul>
+		<li>Imprimir la primera mitad de los caracteres de la cadena.</li>
+		<li>Imprimir el último carácter.</li>
+		<li>Imprimirlo en forma inversa.</li>
+		<li>Imprimir cada carácter del String separado con un guión.</li>
+		<li>Imprimir la cantidad de vocales almacenadas.</li>
+	</ul>
+
+	<script>
+		
+
+		function ultimoCaracter (cadena) {
+			
+			//CharAt El método charAt() de String devuelve en un nuevo String el carácter UTF-16 de una cadena.
+			document.write('<br>');
+		
+			document.write('La ultima letra de tu cadena es: ' + cadena.charAt(cadena.length -1));
+		}
+
+
+		function formaInversa (cadena) {
+			
+			document.write('<br>');
+			document.write('La cadena inversa es: ');
+
+			for (var i = 0; i < cadena.length; i++) {
+				
+				
+				document.write(cadena.charAt(cadena.length-i-1));
+			}
+		}
+
+
+		function cadenaSeparada (cadena) {
+			
+			document.write('<br>');
+			document.write('La cadena separada por guiones es: ');
+
+			for (var i = 0; i < cadena.length; i++) {
+				document.write(cadena.charAt(i) + '-');
+			}
+		}
+
+		
+
+
+		function cantidadVocales (cadena) {
+			
+			document.write('<br>');
+
+			var cantidad = 0;
+
+			for (var i = 0; i < cadena.length; i++) {
+				
+				if (cadena[i] == 'a' || cadena[i] == 'e' || cadena[i] == 'i' || cadena[i] == 'o' || cadena[i] == 'u'
+					|| cadena[i] == 'A'|| cadena[i] == 'E'|| cadena[i] == 'I'|| cadena[i] == 'O'|| cadena[i] == 'U') {
+
+					cantidad +=1;
+				}
+				
+			}
+
+			document.write('La cantidad de vocales : ' + cantidad);
+		}
+
+
+		var cadena = prompt('Indica cual es la cadena de texto');
+
+		ultimoCaracter(cadena);
+		formaInversa(cadena);
+		cantidadVocales(cadena);
+		cadenaSeparada(cadena);
+
+	</script>
+
+</body>
+</html>

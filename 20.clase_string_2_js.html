@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase String JavaScript</title>
+</head>
+<body>
+	<h1>Clase String JavaScript</h1>
+
+	<p><strong>Realizar un programa que permita cargar una dirección de mail e implementar una función que verifique si el String tiene cargado el carácter @.</strong></p>
+	
+	<script>
+			
+			function analizarCadena(cadena){
+
+				var contador = 0;
+
+				for (var i = 0; i < cadena.length; i++) {
+					
+					if (cadena.charAt(i) == '@'){
+
+						contador += 1;
+
+					}
+				}
+
+				if (contador == 1){
+					document.write('el correo es correcto');
+				}else {
+					document.write('el correo es incorrecto');
+				}
+
+			}
+
+			var cadena = prompt('Escribe el email');
+			analizarCadena(cadena);
+
+
+	</script>
+
+</body>
+</html>

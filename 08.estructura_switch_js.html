@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructura condicional Switch</title>
+</head>
+<body>
+
+	<h1>Estructuras switch</h1>
+
+	<p>La instrucción switch es una alternativa para remplazar en algunas situaciones los if/else if. De todos modos se puede aplicar en ciertas situaciones donde la condición se verifica si es igual a cierto valor. No podemos preguntar por mayor o menor.</p>
+
+	<script>
+		
+		function analizarNumero(num){
+
+			switch (num) {
+				case 1: document.write('Numero 1');
+					break;
+				case 2: document.write('Numero 2');
+					break;
+				case 3: document.write('Numero 3');
+					break;
+				default:
+					document.write('Cualquier otro numero');
+					break;
+			}
+
+		}
+
+		var numero = parseInt(prompt('Ingresar el numero'));
+
+		analizarNumero(numero);
+
+
+	</script>
+	
+</body>
+</html>

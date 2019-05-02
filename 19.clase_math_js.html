@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase Math</title>
+</head>
+<body>
+	
+	<h1>Clase Math JavaScript</h1>	
+
+	<p>Esta clase es un contenedor que tiene diversas constantes (como Math.E y Math.PI) y un conjunto de métodos matemáticos:</p>
+
+	<p>A diferencia de los demás objetos globales, el objeto Math no se puede editar. Todas las propiedades y métodos de Math son estáticos. Usted se puede referir a la constante pi como Math.PI y puede llamar a la función seno como Math.sin(x), donde x es el argumento del método. Las constantes se definen con la precisión completa de los números reales en JavaScript.</p>
+
+	<ul>
+		<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math">Referencia Clase Math JavaScript</a></li>
+		<li><a href="https://www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=20&cod=21">Referencia Clase Math curso JavaScriptYa</a></li>
+	</ul>
+
+	<p><strong>Ejemplo: Confeccionar un programa que permita cargar un valor comprendido entre 1 y 10. Luego generar un valor aleatorio entre 1 y 10, mostrar un mensaje con el número sorteado e indicar si ganó o perdió:</strong></p>
+	
+
+	<script>
+		
+		function adivinarNumero (numero) {
+
+			var bandera = true;
+			var intentar_nuevamente;
+			var intento = 1;
+
+			while (bandera == true) {
+
+				//Math.random retorna un valor flotante por eso se convierte en Int
+				var num_aleatorio = parseInt(Math.random()*10);
+
+				document.write('Intento: ' + intento + '<br>');
+				document.write('El numero aleatorio es: ' + num_aleatorio + '<br>');
+				document.write('Tu numero es: '+ numero + '<br>');
+
+				if (numero == num_aleatorio){
+
+					document.write('<strong>Felicidades adivinaste el numero</strong>');
+					bandera = false;
+
+				}else {
+
+					document.write('No adivinaste el numero <br>');
+
+					intentar_nuevamente = parseInt(prompt('¿Volver a intentar? \n1.Si \n2.No'));
+
+					if (intentar_nuevamente == 1){
+
+						bandera = true;
+						numero = parseInt(prompt('Ingresa numero entre 1 y 10'));
+
+						intento +=1;
+
+					}else {
+
+						bandera = false;
+
+					}
+				}
+			}
+
+		}
+
+		var numero = parseInt(prompt('Ingresa numero entre 1 y 10'));
+
+		if(numero > 0 && numero <= 10){
+
+			adivinarNumero(numero);
+
+
+		}else {
+
+			alert('El numero debe ser entre 1 y 10');
+		}
+
+
+	</script>	
+</body>
+</html>

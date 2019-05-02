@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operador lógico Y</title>
+</head>
+<body>
+
+	<h1>Operador Lógico "Y"</h1>
+
+	<p>El operador &&, traducido se lo lee como "Y". Se emplea cuando en una estructura condicional se disponen dos condiciones.
+
+	Cuando vinculamos dos o más condiciones con el operador "&&" las dos condiciones deben ser verdaderas para que el resultado de la condición compuesta de Verdadero y continúe por la rama del verdadero de la estructura condicional.
+
+	Recordemos que la condición debe ir entre paréntesis en forma obligatoria.
+
+	La utilización de operadores lógicos permiten en muchos casos, plantear algoritmos más cortos y comprensibles.</p>
+
+	<strong>Ejemplo:</strong>
+
+	<p>Realizar un programa que pida cargar una fecha cualquiera, luego verificar si dicha fecha corresponde a Navidad (se debe cargar por separado el dia, el mes y el año)</p>
+
+	<script>
+		
+		function analizarFecha(dia,mes){
+
+			if (dia == '25' && mes == 'diciembre'){
+
+				document.write('Es Navidad');
+
+			}else {
+				document.write('Fecha cualquiera');
+			}
+
+		}
+
+
+		var dia = prompt('Introduce el dia: ');
+		var mes = prompt('Introduce el mes');
+
+
+		analizarFecha(dia,mes);
+
+	</script>
+
+	
+</body>
+</html>

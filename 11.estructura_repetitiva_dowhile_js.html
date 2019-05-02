@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructura Repetitiva Do While</title>
+</head>
+<body>
+
+	<section>
+		
+		<div>
+
+			<h1>Estructura repetitiva do while</h1>
+
+			<p>La sentencia do/while es otra estructura repetitiva, la cual ejecuta al menos una vez su bloque repetitivo, a diferencia del while que puede no ejecutar el bloque.
+
+			Esta estructura repetitiva se utiliza cuando conocemos de antemano que por lo menos una vez se ejecutará el bloque repetitivo.
+
+			La condición de la estructura está abajo del bloque a repetir, a diferencia del while que está en la parte superior.
+
+			Finaliza la ejecución del bloque repetitivo cuando la condición retorna falso, es decir igual que el while.</p>
+
+			<strong>Ejemplo: </strong>
+
+			<p>Se realizó un censo provincial y se desea procesar la información obtenida en dicho censo. De cada una de las personas censadas se tiene la siguiente información: número de documento, edad y sexo ('femenino' o 'masculino')
+			Se pide confeccionar un programa que lea los datos de cada persona censada (para finalizar ingresar el valor cero en el número de documento) e informar:</p>
+			
+				<ul>
+					<li>Cantidad total de personas censadas.</li>
+					<li>Cantidad de varones.</li>
+					<li>Cantidad de mujeres.</li>
+					<li>Cantidad de varones cuya edad varía entre 16 y 65 años.</li>
+				</ul>
+
+		</div>
+
+		<div>
+
+			<script>
+
+				function analisisSenso(){
+
+					var id;
+					var sexo;
+					var edad;
+
+					var mujeres = 0;
+					var hombres = 0;
+					var edad_hombre = 0;
+					var personas_censadas = 0;
+
+					do{	
+
+						id = parseInt(prompt('Teclea el numero de identificación'));
+						
+						if (id != 0){
+
+							sexo = prompt('Define tu sexo: \n h para hombre\nf para femenino:');
+
+							if (sexo == 'h'){
+
+								hombres += 1;
+
+								edad = parseInt(prompt('Cual es tu edad: '));
+
+								if (edad >= 16 && edad <=65){
+
+								edad_hombre +=1;
+
+								}
+							
+							}else if(sexo == 'm'){
+
+								mujeres += 1;	
+
+							}
+
+							personas_censadas +=1;
+						
+						}
+						
+					}while(id != 0);
+
+					document.write('El numero de personas censadas es: ' + personas_censadas + '<br>');
+					document.write('El numero de mujeres es: ' + mujeres + '<br>');
+					document.write('El numero de hombres es: ' + hombres+ '<br>');
+					document.write('El numero de hombres con edad entre 16 y 65 años es: ' + edad_hombre);
+
+				}
+
+				analisisSenso();
+
+			</script>
+					
+		</div>
+
+
+	</section>
+
+</body>
+</html>

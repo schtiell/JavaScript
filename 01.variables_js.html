@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calcular peso en marte</title>
+</head>
+<body>
+
+	<h1>Tu peso en jupiter o marte</h1>
+
+	<p>Calcular el peso de una persona en marte o jupiter</p>
+
+	<script>
+
+		function calcular_pesoMarte(peso,tierra,marte){
+
+			var peso_marte = (peso * marte)/ tierra;
+			return peso_marte;
+
+		}
+
+		function calcular_pesoJupiter(peso,tierra,jupiter){
+
+			var peso_jupiter = (peso * jupiter)/ tierra;
+			return peso_jupiter;
+
+		}
+		
+		var g_tierra = 9.8; //Gravedad en la Tierra
+		var g_marte = 3.7; // Gravedad en Marte
+		var g_jupiter = 24.8; //Gravedad en Júpiter
+		var peso = 92; //peso actual
+
+		//2 tipos de imprimir el resultado, ya sea con una ventana de alerta o en el cuerpo de la página
+
+		alert('Tu peso en Marte es: ' + calcular_pesoMarte(peso,g_tierra,g_marte));
+		alert('Tu peso en Júpiter es: ' + calcular_pesoMarte(peso,g_tierra,g_jupiter));
+
+		document.write('Tu peso en Marte es: ' + calcular_pesoMarte(peso,g_tierra,g_marte) + '<br>')
+		document.write('Tu peso en Júpiter es: ' + calcular_pesoMarte(peso,g_tierra,g_jupiter));
+
+	</script>
+
+</body>
+</html>

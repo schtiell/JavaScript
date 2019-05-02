@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructuras condicionales anidadas</title>
+</head>
+<body>
+
+	<h1>Estructuras Condicionales Anidadas</h1>
+
+	<p>Decimos que una estructura condicional es anidada cuando por la rama del verdadero o el falso de una estructura condicional hay otra estructura condicional.</p>
+
+	<strong>Ejemplo:</strong>
+
+	<p>Confeccionar un programa que pida por teclado tres notas de un alumno, calcule el promedio e imprima alguno de estos mensajes:</p>
+
+	<ul><li>Si el promedio es >=7 mostrar "Promocionado".</li>
+		<li>Si el promedio es >=4 y <7 mostrar "Regular".</li>
+		<li>Si el promedio es <4 mostrar "Reprobado".</li>
+	</ul>
+	
+	
+	<script>
+
+		function calificacionAlumno(calificacion) {
+
+			if(calificacion >=0 && calificacion< 4){
+
+				document.write('El alumno está reprobado');
+
+			}else if(calificacion >4 &&  calificacion<8){
+
+				document.write('Aprobado con calificación regular');
+
+			}else if(calificacion >=9 && calificacion<=10){
+				
+				document.write('Aprobado con excelencia');
+
+			}else {
+				
+				document.write('Calificación fuera de rango');
+			}
+		}
+
+		var nota = parseInt(prompt('Cual es la califición del alumno: '));
+
+		calificacionAlumno(nota);
+		
+	</script>
+	
+</body>
+</html>

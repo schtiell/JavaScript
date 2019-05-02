@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructuras condicionales simples</title>
+</head>
+<body>
+
+	<h1>Estructuras condicionales simple</h1>
+
+	<script>
+
+		function calcularPesoMarte(peso,marte,tierra){
+
+			var peso_final = (peso * marte)/tierra;
+			document.write("Tu peso en Marte es <strong>" + peso_final+' kilos<strong>');
+
+		}
+			
+			
+		function calcularPesoJupiter(peso,jupiter){
+
+			var peso_final = (peso * jupiter)/tierra;
+			document.write("Tu peso en Júpiter es <strong>" + peso_final+' kilos<strong>');
+		}
+
+
+		
+		var peso = prompt('Cual es tu peso');
+		var planeta = parseInt(prompt('En que planeta quieres saber tu peso?\n 1 Es Marte\n 2 es Jupiter: '));
+
+		var tierra = 9.8;
+		var marte = 3.7;
+		var jupiter = 24.8;
+
+		if (planeta == 1){
+
+			calcularPesoMarte(peso,marte,tierra);
+
+		}else {
+			
+			calcularPesoJupiter(peso,jupiter,tierra);
+		}
+
+
+	</script>
+	
+</body>
+</html>

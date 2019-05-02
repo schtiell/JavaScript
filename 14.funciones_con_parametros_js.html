@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manejo de funcion con parámetros</title>
+</head>
+<body>
+
+	<section>
+		<div id="body">
+			
+			<h1>Funciones con parámetros JavaScript</h1>
+
+			<p>Los parametros de una función son los valores que esta recibe por parte del código que la llama. Pueden ser tipos simples u objetos. En la declaración de la función se escriben después del nombre entre paréntesis indicándose el tipo de cada uno y su nombre.</p>
+			
+		</div>
+
+		<div>
+			
+			<script>
+				
+				function imprimirMenor(num1,num2,num3){
+
+					if(num1 < num2 && num1 < num3 ){
+
+						document.write('El numero '+ num1 +' es el menor');
+
+					}else if(num2 < num1 && num2 < num3) {
+						
+						document.write('El numero '+ num2 +' es el menor');
+
+					}else {
+						
+						document.write('El numero '+ num3 +' es el menor');
+					}
+
+
+				}
+
+				var numero1 = parseInt(prompt('Primer numero'));
+				var numero2 = parseInt(prompt('Segunddo numero'));
+				var numero3 = parseInt(prompt('Tercer numero'));
+
+				document.write('Tus numeros indicados son: ' + numero1 + ', ' + numero2 + ', ' + numero3 +'<br>');
+				imprimirMenor(numero1,numero2,numero3);
+
+			</script>
+
+
+		</div>
+	</section>
+	
+</body>
+</html>

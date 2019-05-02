@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase Array</title>
+</head>
+<body>
+
+	<div id="body">
+	
+		<h1>Clase Array JavaScript</h1>	
+
+		<p>Un vector es una estructura de datos que permite almacenar un CONJUNTO de datos.
+		Con un único nombre se define un vector y por medio de un subíndice hacemos referencia a cada elemento del mismo (componente).</p>
+
+	</div>
+
+		<script>
+			
+			function cargarSalarios(salarios) {
+
+				 for (var i = 0; i<=salarios.length; i++){
+				 	
+				 	var sueldo = parseInt(prompt('salario'));
+				 	salarios[i] = sueldo;
+
+				 }
+			}
+
+			function totalSalarios(salarios) {
+				
+				var total = 0;
+
+				for (var i = 0; i <= salarios.length; i++) {
+					
+					total = total + salarios[i];
+
+				}
+
+				document.write('Listado de sueldos: ');
+
+
+				for (var i = 0; i <= salarios.length; i++) {
+					
+					document.write(salarios[i]+'<br>');
+				}
+
+				document.write('El total de los salarios es: '+ total);
+			}
+			
+
+			var salarios;
+
+			salarios = new Array(5);
+
+			cargarSalarios(salarios);
+			totalSalarios(salarios);
+
+		</script>
+	<div>
+		
+	</div>
+	
+</body>
+</html>

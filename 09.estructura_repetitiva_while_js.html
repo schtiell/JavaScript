@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructura While</title>
+</head>
+<body>
+
+	<h1>Estructura repetitiva while</h1>
+
+	<p>Existe otro tipo de estructuras tan importantes como las anteriores que son las estructuras REPETITIVAS.Una estructura repetitiva permite ejecutar una instrucción o un conjunto de instrucciones varias veces.
+	Una ejecución repetitiva de sentencias se caracteriza por:</p>
+
+	<ul>
+		<li>La o las sentencias que se repiten.</li>
+		<li>El test o prueba de condición antes de cada repetición, que motivará que se repitan o no las sentencias.</li>
+	</ul>
+
+	<p>Funcionamiento del while: En primer lugar se verifica la condición, si la misma resulta verdadera se ejecutan las operaciones que indicamos entre las llaves que le siguen al while. En caso que la condición sea Falsa continúa con la instrucción siguiente al bloque de llaves.</p>
+
+	<p><strong>El bloque se repite MIENTRAS la condición sea Verdadera
+
+	<p>Importante: Si la condición siempre retorna verdadero estamos en presencia de un ciclo repetitivo infinito. Dicha situación es un error de programación, nunca finalizará el programa..</strong></p>
+
+	Ejemplo: Realizar un programa que imprima en pantalla los números del 1 al 100.
+
+	Sin conocer las estructuras repetitivas podemos resolver el problema empleando una estructura secuencial. Inicializamos una variable con el valor 1, luego imprimimos la variable, incrementamos nuevamente la variable y así sucesivamente. Pero esta solución es muy larga.
+
+	La mejor forma de resolver este problema es emplear una estructura repetitiva:</p>
+
+
+	<script>
+		
+		function imprimirSecuencia(){
+
+			var num = 1;
+
+			while (num<=10) {
+				document.write(num + '<br>');
+
+				num+=1;
+			}
+
+			document.write('Fin de la secuenia de impresión');
+
+		}
+
+		imprimirSecuencia();
+
+	</script>
+
+
+</body>
+</html>

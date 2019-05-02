@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operador Lógico O</title>
+</head>
+<body>
+	
+	<h1>Operador Lógico "O" "||"</h1>
+
+	<p><strong>El operador O en javascrip se expresa || </strong></p>
+
+	<p>Traducido se lo lee como "O". Si la condición 1 es Verdadera o la condición 2 es Verdadera, luego ejecutar la rama del Verdadero. Cuando vinculamos dos o más condiciones con el operador "O", con que una de las dos condiciones sea Verdadera alcanza para que el resultado de la condición compuesta sea Verdadero.</p>
+
+
+	<script>
+		
+		function analizarFecha(dia,mes,anho){
+
+			if(mes == 'enero' || mes == 'febrero' || mes == 'marzo'){	
+
+				document.write(dia +' '+mes+' '+anho);
+				document.write('La fecha corresponde al primer trimestre del año')
+
+			}else {
+				document.write('La fecha no es del primer trimestre del año ' + anho);
+			}
+
+		}
+
+		var day = prompt('Día: ');
+		var month = prompt('Mes: ');
+		var year = prompt('year');
+
+
+		analizarFecha(day,month,year);
+
+	</script>
+
+</body>
+</html>

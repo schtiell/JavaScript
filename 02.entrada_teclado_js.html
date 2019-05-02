@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Entrada de datos por teclado</title>
+</head>
+<body>
+	
+	<h1>Entrada de datos por teclado</h1>
+
+	<script>
+		
+		function datosPorTeclado(nombre,sueldo){
+
+			var bono = sueldo*.10;
+			var salarioTotal = sueldo + bono;
+
+			 document.write('Tu nombre es: ' + nombre + ' y tu sueldo es: ' + salarioTotal);	
+
+		}
+
+		//Entrada de datos por teclado
+		//parseInt convierte los datos entrados por teclado que son siempre strings 
+		var nombre = prompt('Cual es tu nombre: ');
+		var sueldo = parseInt(prompt('Cual es tu salario'));
+
+		datosPorTeclado(nombre,sueldo);
+
+	</script>
+
+</body>
+</html>
