@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Select JavaScript</title>
+</head>
+<body>
+
+	<h1>Control Select JavaScript</h1>
+	<p><strong>Ejemplo: <br>
+	Confeccionar una página que muestre un objeto SELECT con distintos tipos de pizzas (Hawaiana, Muzzarella, Alambre). Al seleccionar una, mostrar en un objeto de tipo TEXT el precio de la misma.</strong></p>
+
+	<script>
+		
+		function pizzas () {
+			
+			document.getElementById('tipo').value = document.getElementById('pizza').options[document.getElementById('pizza').selectedIndex].text;
+
+			document.getElementById('precio').value = '$' + document.getElementById('pizza').options[document.getElementById('pizza').selectedIndex].value;
+  }
+
+	</script>
+
+	<form action="">
+		<select name="" id="pizza" onChange="pizzas()">
+			<option value="180.99" >Hawaiana</option>
+			<option value="200.99">Muzzarella</option>
+			<option value="220.99">Alambre</option>
+		</select><br>
+		<label for="">Pizza elegida:</label>
+		<input type="text" id="tipo">
+		<br>
+		<label for="">Precio</label>
+		<input type="text" id="precio">
+
+	</form>
+
+</body>
+</html>

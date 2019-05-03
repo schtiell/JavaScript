@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contron Select JavaScript</title>
+</head>
+<body>
+
+	<h1>Control SELECT</h1>
+
+	<p>Este otro objeto visual que podemos disponer en un FORM permite realizar la selección de un string de una lista y tener asociado al mismo un valor no visible. El objetivo fundamental en JavaScript es determinar qué elemento está seleccionado y qué valor tiene asociado. Esto lo hacemos cuando ocurre el evento onChange.</p>
+
+	<p>Para determinar la posición del índice seleccionado en la lista:</p>
+
+	<p><strong>document.getElementById('select1').selectedIndex;</strong></p>
+
+	<p>Considerando que el objeto SELECT se llama select1 accedemos a la propiedad selectedIndex (almacena la posición del string seleccionado de la lista, numerando a partir de cero)</p>
+
+	<p>Para determinar el string seleccionado:</p>
+
+	<p><strong> document.getElementById('select1').options[document.getElementById('select1').selectedIndex].text;</strong></p>
+
+	<p>Es decir que el objeto select1 tiene otra propiedad llamada options, a la que accedemos por medio de un subíndice, al string de una determinada posición.</p>
+
+	<p>Hay problemas en los que solamente necesitaremos el string almacenado en el objeto SELECT y no el valor asociado (no es obligatorio asociar un valor a cada string).</p>
+
+	<p>Y por último con esta expresión accedemos al valor asociado al string:</p>
+
+	<p><strong>document.getElementById('select1').options[document.getElementById('select1').selectedIndex].value;</strong></p>
+
+	<p><strong>Ejemplo: <br>Un ejemplo completo que muestra el empleo de un control SELECT es:</strong></p>
+	
+	<hr>
+	
+	<script>
+		function cambiarColor() {
+			var seleccion=document.getElementById('select1');
+			document.getElementById('text1').value=seleccion.selectedIndex;
+			document.getElementById('text2').value=seleccion.options[seleccion.selectedIndex].text;
+			document.getElementById('text3').value=seleccion.options[seleccion.selectedIndex].value;
+		}
+	</script>
+
+
+
+	<form>
+
+		<select id="select1" onChange="cambiarColor()">
+			<option value="ff0000">Rojo</option>
+			<option value="00ff00">Verde</option>
+			<option value="0000ff">Azul</option>
+		</select>
+
+		<br>
+		<label for="">Número de índice seleccionado del objeto SELECT:</label>
+		<input type="text" id="text1"><br>
+		<br>
+		<label for="">Texto seleccionado:</label>
+		<input type="text" id="text2"><br>
+		<br>
+		<label for="">Valor asociado:</label>
+		<input type="text" id="text3"><br>
+
+	</form>
+
+	<hr>
+
+	<p>Se debe analizar en profundidad este problema para comprender primeramente la creación del objeto SELECT en HTML, y cómo acceder luego a sus valores desde Javascript.</p>
+
+	<p>Es importante para el objeto SELECT definir qué función llamar cuando ocurra un cambio: onChange="cambiarColor()".
+	</p>
+	
+	<p>Por cada opción del objeto SELECT tenemos una línea:</p>
+
+    <p><option value="ff0000">Rojo</option></p> 
+
+	<p>Donde Rojo es el string que se visualiza en el objeto SELECT y value es el valor asociado a dicho string. Analizando la función cambiarColor() podemos ver cómo obtenemos los valores fundamentales del objeto SELECT.</p>
+
+
+
+
+</body>
+</html>
