@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase Array</title>
+</head>
+<body>
+	<h1>Clase Array JavaScript</h1>
+
+	<p><strong>Ejemplo:</strong></p>
+	<p>Realizar un programa que pida la carga de dos vectores numéricos. 
+		<ul>
+			<li>Obtener la suma de los dos vectores, dicho resultado guardarlo en un tercer vector del mismo tamaño.</li>
+			<li>Sumar componente a componente.</li>
+			<li>El tamaño del vector es a elección.</li>
+		</ul>
+	</p>
+		
+	<script>
+
+		function llenarArreglo_A (arregloA) {
+			
+			for (var i = 0; i<arregloA.length; i++) {
+				arregloA[i] = parseInt(prompt('Numeros primer arreglo'));
+				document.write(arregloA[i] + ' ');
+			}
+
+			document.write('<br>')
+
+		}
+
+		function llenarArreglo_B (arregloB) {
+
+			for (var i = 0; i<arregloB.length; i++) {
+				arregloB[i] = parseInt(prompt('Numeros segundo arreglo'));
+				document.write(arregloB[i] + ' ');
+			}
+
+			document.write('<br>')
+
+		}
+
+		function sumarArreglos (arregloA,arregloB,arregloC) {
+			
+			for (var i = 0; i < arregloC.length; i++) {
+				
+				arregloC[i] = arregloA[i] + arregloB[i];
+				document.write(arregloC[i] + ' ');
+			}
+
+
+
+
+		}
+
+		
+		var tamaño = parseInt(prompt('De cuantas posiciones el vector?'));
+
+		var arreglo_a = new Array(tamaño);
+		var arreglo_b = new Array(tamaño); 
+		var arreglo_c = new Array(tamaño);
+
+		document.write('<strong> Valores del arreglo A: </strong>');
+		llenarArreglo_A(arreglo_a);
+		
+		document.write('<strong> Valores del arreglo B: </strong>');
+		llenarArreglo_B(arreglo_b);
+
+		document.write('<strong> La suma de los valors es: </strong>');
+		sumarArreglos(arreglo_a,arreglo_b,arreglo_c);
+
+	</script>
+		
+		
+</body>
+</html>

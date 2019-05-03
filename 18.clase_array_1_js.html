@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase Array</title>
+</head>
+<body>
+
+	<script>
+
+		function llenarArreglo(arreglo){
+
+
+			for(var i=0; i<arreglo.length; i++) {
+					
+				var calificaciones = parseInt(prompt('Calificaciones'));
+				arreglo[i] = calificaciones;
+			}
+
+		}
+
+		function imprimirArreglo(arreglo){
+			
+			var sumatoria = 0;
+
+			for (var i=0; i<arreglo.length; i++) {
+					
+				sumatoria  = sumatoria + arreglo[i];
+				document.write(arreglo[i] + '<br>');
+
+			}
+
+			var promedio = sumatoria/5;
+			document.write('El promedio es: ' +  promedio);
+
+
+		}
+			
+			var arreglo;
+			arreglo = new Array(5);
+
+			llenarArreglo(arreglo);
+			imprimirArreglo(arreglo);
+	</script>
+	
+</body>
+</html>

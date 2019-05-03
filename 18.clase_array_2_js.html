@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase Array ejemplo 2</title>
+</head>
+<body>
+
+	<h1>Clase Array</h1>
+
+	<p><strong>Ejemplo 2:</strong></p>
+	<p>Desarrollar un programa que permita ingresar un vector de 8 elementos, e informe:</p>
+	<ul><li>El valor acumulado de todos los elementos del vector.</li>
+		<li>El valor acumulado de los elementos del vector que sean mayores a 36.</li>
+		<li>Cantidad de valores mayores a 50.</li>
+	</ul>
+
+
+	<script>
+
+		 function llenarArreglo(arreglo){
+
+		 	var suma_elementos = 0;
+		 	var suma_x = 0;
+		 	var suma_y = 0;
+
+		 	var i;
+		 	for (i = 0; i < arreglo.length; i++) {
+		 		
+		 		arreglo[i] = parseInt(prompt('Ingresa numeros: '));
+		 		suma_elementos = suma_elementos + arreglo[i];
+
+		 		if(arreglo[i] >= 36 && arreglo[i] <= 49){
+
+		 			suma_x = suma_x + arreglo[i];
+
+		 		}else if(arreglo[i] >= 50) {
+
+		 			suma_y =  suma_y + arreglo[i];
+		 			
+		 		}
+
+		 	}
+
+		 	document.write('La suma de los elementos es: ' + suma_elementos+ '<br>');
+		 	document.write('La suma de los elementos mayores a 36 es: ' + suma_x + '<br>');
+		 	document.write('La suma de los elementos mayores a 50 es: ' + suma_y);
+
+
+		 }
+
+		 
+		 var arreglo = new Array(8);
+
+		 llenarArreglo(arreglo);
+
+
+
+	</script>
+	
+</body>
+</html>
