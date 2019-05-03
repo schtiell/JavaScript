@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+	<h1>Controles FORM, BUTTON y TEXT.</h1>
+
+	<p><strong>Ejemplo: </strong></p>
+
+	<p><strong>Cargar un nombre y un apellido en sendos text. Al presionar un botón, concatenarlos y mostrarlos en un tercer text (Tener en cuenta que podemos modificar la propiedad value de un objeto TEXT cuando ocurre un evento)</strong></p>
+	
+	
+	<script>
+		
+		function concatenarNombre () {
+			
+			var nom = document.getElementById('nombre').value;
+			var apell = document.getElementById('apellido').value;
+			document.getElementById('nombre_completo').value=nom+' '+apell;
+		}
+
+	</script>
+
+
+	<form action="">
+		<label for="">Nombre: </label>
+		<input type="text" id="nombre">
+		<br>
+		<label for="">Apellido: </label>
+		<input type="text" id="apellido">
+		<br>
+		<input type="button" value="Enviar" onClick="concatenarNombre()">
+		<br>
+		<input type="text" id="nombre_completo">
+	</form>	
+	
+</body>
+</html>

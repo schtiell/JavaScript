@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Controles FORM, BUTTON y TEXT</title>
+</head>
+<body>
+	<h1>Controles FORM, BUTTON y TEXT.</h1>
+	
+	<p>Hasta ahora hemos visto como crear un formulario con controles de tipo BUTTON. Agregamos un control de tipo TEXT (permite al operador cargar caracteres por teclado).</p>
+
+	<p>Veremos la importancia de definir un id a todo control de un formulario.</p>
+
+	<p>Con un ejemplo veremos estos controles: Confeccionar un formulario que permita ingresar el nombre y edad de una persona:</p>
+	
+
+	<script>
+		
+		function mostrarDatos(){
+
+			var nombre = document.getElementById('nombre').value;
+			var edad = document.getElementById('edad').value;
+
+			alert(nombre + ' ' + edad);
+
+		}
+
+	</script>
+	
+
+	<form action="">
+
+		<label for="">Ingresa tu nombre</label>
+		<input type="text" id="nombre">
+		<br>
+		<label for="">Ingresa tu edad</label>
+		<input type="text" id="edad">
+		<br>
+		<input type="button" onclick="mostrarDatos()" value="Enviar">
+
+	</form>
+
+	<p>En este problema tenemos cuatro controles: 1 FORM, 1 BUTTON, 2 TEXT. El evento que se dispara al presionar el botón se llama mostrar.</p>
+
+	<p>La función 'mostrarDatos()' accede a los contenidos de los dos controles de tipo TEXT:</p>
+	
+	<p><strong>var nom=document.getElementById('nombre').value; <br>
+  		var ed=document.getElementById('edad').value;</strong></p>
+
+  	<p>Para hacer más clara la función guardamos en dos variables auxiliares los contenidos de los controles de tipo TEXT. </p>
+
+	<p>La propiedad "id" es un identificador único para cualquier elemento HTML que luego nos permite desde Javascript acceder a dicho elemento.</p>
+
+	<p>El método getElementById nos retorna una referencia del objeto HTML que le pasamos como parámetro, a partir de este objeto accedemos a la propiedad value que almacena el valor ingresado por el operador en el control TEXT.</p>
+
+	<p>Luego de extraer los valores ingresados por el operador los mostramos utilizando la función alert:</p>
+
+	<p><strong>var nom=document.getElementById('nombre').value;<br>
+  var ed=document.getElementById('edad').value;<br>
+  alert('Ingresó el nombre:' + nom);<br>
+  alert('Y la edad:' + ed);</strong></p>
+	
+	
+
+
+</body>
+</html>

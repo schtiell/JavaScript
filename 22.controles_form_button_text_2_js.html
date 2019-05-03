@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Controles FORM, BUTTON y TEXT</title>
+</head>
+<body>
+
+	<h1>Controles FORM, BUTTON y TEXT.</h1>
+	
+	<p><strong>Ejemplo 2:</strong></p>
+
+	<p><strong>Crear un programa que permita cargar un entero en un text y al presionar un botón nos muestre dicho valor elevado al cubo (emplear la función alert).</strong></p>
+
+	<script>
+		
+		function elevarAlCubo(){
+
+			var numero = document.getElementById('numero').value;
+			var num_elevado = Math.pow(numero, 3);
+
+			alert('Tu número al cubo es: ' + num_elevado);
+		}
+
+	</script>
+	
+	<form action="">
+		<input type="text" id="numero">
+		<input type="button" onclick="elevarAlCubo()">
+	</form>
+
+</body>
+</html>

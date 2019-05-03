@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Controles FORM, BUTTON y TEXT.</title>
+</head>
+<body>
+
+	<h1>Controles FORM, BUTTON y TEXT.</h1>
+
+	<p><strong>Ejemplo: </strong></p>
+
+	<p><strong>Cargar dos números en objetos de tipo text y al presionar un botón, mostrar el mayor.</strong></p>
+
+	<script>
+
+		function compararNumeros () {
+			
+			var num1 = document.getElementById('numero1').value;
+			var num2 = document.getElementById('numero2').value;
+
+			if(num1 == num2){
+				alert('Los numeros son iguales');
+			}else if(num1 > num2){
+				alert( num1 + ' es mayor que ' + num2);
+			}else{
+				alert( num2 + ' es mayor que ' + num1);
+			}
+
+		}
+		
+	</script>
+
+	<form action="">
+		<label for="">Numero 1:</label>
+		<input type="text" id="numero1"> 
+		<br>
+		<label for="">Numero 2:</label>
+		<input type="text" id="numero2">
+		<br>
+		<input type="button" onclick="compararNumeros()" value="Enviar">
+	</form>
+	
+</body>
+</html>
