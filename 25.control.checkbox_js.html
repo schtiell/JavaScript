@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Checkbox JavaScritp</title>
+</head>
+<body>
+
+	<h1>Control Checkbox JavaScritp</h1>
+	<p>El control CHECKBOX es el cuadradito que puede tener dos estados (seleccionado o no seleccionado).</p>
+
+	<p>Para conocer su funcionamiento y ver como podemos acceder a su estado desde Javascript haremos un pequeña página.</p>
+
+	<p><strong>Ejemplo:</strong><br>Confeccionar una página que muestre 4 lenguajes de programación que el usuario puede seleccionar si los conoce. Luego mostrar un mensaje indicando la cantidad de lenguajes que ha seleccionado el operador.</p>
+	
+	<hr>
+
+	<p>Elige los lenguajes de programación que conozcas</p>
+	
+	<script>
+		
+		function revisarOpciones () {
+
+			var contador = 0;
+
+			if(document.getElementById('checkbox1').checked){
+
+				contador+=1;
+				var php = document.getElementById('checkbox1').value;
+			}
+
+
+			if(document.getElementById('checkbox2').checked){
+
+				contador+=1;
+			}
+
+
+			if(document.getElementById('checkbox3').checked){
+
+				contador+=1;
+			}
+
+
+			if(document.getElementById('checkbox4').checked){
+
+				contador+=1;
+			}
+
+			if(document.getElementById('checkbox5').checked){
+
+				contador+=1;
+			}
+
+
+			alert('Al parecer conoces ' + contador + ' lenguajes de programación ' + php);
+		}
+
+
+
+	</script>
+
+
+
+
+	<form action="">
+		
+		<label for="">Php</label>
+		<input type="checkbox" id="checkbox1"><br>
+
+		<label for="">Javascript</label>
+		<input type="checkbox" id="checkbox2"><br>
+
+		<label for="">Python</label>
+		<input type="checkbox" id="checkbox3"><br>
+		
+		<label for="">C++</label>
+		<input type="checkbox" id="checkbox4"><br>
+
+		<label for="">Sql</label>
+		<input type="checkbox" id="checkbox5"><br>
+		
+		<input type="button" value="Enviar" onclick="revisarOpciones()">
+
+	</form>
+
+
+</body>
+</html>
