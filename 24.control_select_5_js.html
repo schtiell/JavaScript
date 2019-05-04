@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Select</title>
+</head>
+<body>
+
+	<h1>Control Select JavaScript</h1>
+
+	<p><strong>Ejercicio:</strong></p>
+
+	<p>Confeccionar una página que permita tomar un examen múltiple choice. Se debe mostrar una pregunta y seguidamente un objeto SELECT con las respuestas posibles. Al presionar un botón mostrar la cantidad de respuestas correctas e incorrectas (Disponer 4 preguntas y sus respectivos controles SELECT) </p>
+	
+	<hr>
+	
+	<h2>Examen Inglés Nivel 1</h2>
+	<p>En base a tu conocimiento del idioma inglés respónde los siguiente:</p>
+
+
+	<script>
+		
+		function revisarRespuestas () {
+
+			var pregunta1 = document.getElementById('pregunta1');
+			var respuesta1 = pregunta1.options[pregunta1.selectedIndex].value;
+
+			var pregunta2 = document.getElementById('pregunta2');
+			var respuesta2 = pregunta2.options[pregunta2.selectedIndex].value;
+
+			var pregunta3 = document.getElementById('pregunta3');
+			var respuesta3 = pregunta3.options[pregunta3.selectedIndex].value;
+
+			var pregunta4 = document.getElementById('pregunta4');
+			var respuesta4 = pregunta4.options[pregunta4.selectedIndex].value;	
+
+			var contador = 0;
+
+			if (respuesta1 == 3){
+				contador+=1;
+
+			}
+
+			if (respuesta2 == 2) {
+				contador+=1;
+			}
+
+			if (respuesta3 == 1) {
+				contador+=1;
+			}
+
+			if (respuesta4 == 2) {
+				contador+=1;
+			}
+
+			//document.getElementById('aciertos').value = contador;
+			alert('Tus respuestas correctas son: ' + contador);
+
+			contador = 0;
+		}
+
+	</script>
+
+
+	<form action="">
+		
+		<label for="">Rojo en inglés es: </label>
+		<select name="" id="pregunta1">
+			<option value="1">rex</option>
+			<option value="2">ret</option>
+			<option value="3">red</option>
+		</select><br><br>
+
+		<label for="">Gris en inglés es: </label>
+		<select name="" id="pregunta2">
+			<option value="1">grey</option>
+			<option value="2">gray</option>
+			<option value="3">grai</option>
+		</select><br><br>
+
+		<label for="">verde en inglés es: </label>
+		<select name="" id="pregunta3">
+			<option value="1">green</option>
+			<option value="2">grin</option>
+			<option value="3">grein</option>
+		</select><br><br>
+
+		<label for="">auto en inglés es: </label>
+		<select name="" id="pregunta4">
+			<option value="1">card</option>
+			<option value="2">car</option>
+			<option value="3">kar</option>
+		</select><br><br>
+		
+		<label for="">auto en inglés es: </label>
+		<input type="text" id="aciertos"><br><br>
+		
+		<input type="button" value="Calificar" onclick="revisarRespuestas()">
+
+	</form>
+
+</body>
+</html>

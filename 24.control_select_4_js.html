@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Select JavaScript</title>
+</head>
+<body>
+
+	<h1>Control Select JavaScript</h1>
+	
+	<p><strong>Ejercicio:</strong></p>
+
+	<p>Confeccionar una página que permita seleccionar una pizza y la cantidad de unidades. Luego al presionar un botón calcular el importe a pagar. Utilizar un objeto de la clase SELECT para la selección de la pizza, pudiendo ser:</p>	
+
+	<ul>
+		<li>Queso: $ 4.</li>
+		<li>Jamón y queso: $ 6.</li>
+		<li>Especial: $ 10.</li>
+	</ul>
+
+	<p>A la cantidad de pizzas cargarla en un objeto de la clase TEXT y en otro objeto de la clase TEXT mostrar el importe total a abonar. </p>
+	
+	<hr>
+
+	<script>
+		
+		function calcularPrecio () {
+
+			var pizza = document.getElementById('pizza');
+			var costo = pizza.options[pizza.selectedIndex].value;
+			var cantidad = document.getElementById('cantidad').value;
+
+			costo = parseInt(costo);
+			cantidad = parseInt(cantidad);
+
+			var monto = costo * cantidad;
+
+			document.getElementById('costo').value = '$ ' + monto + ' dls';
+
+		}
+	
+		
+	</script>
+
+	<form action="">
+		
+		<label for="">Elije tu pizza: </label>
+		<select name="" id="pizza">
+			<option value="4">queso $4.00 dls</option>
+			<option value="6">jamon y queso $6.00 dls</option>
+			<option value="10">especial $10 dls</option>
+		</select><br>
+		
+		<label for="">Cuantas pizzas deseas:</label>
+		<input type="text" id="cantidad"><br>
+		
+		<label for="">Costo:</label>
+		<input type="text" id="costo"> <br>
+
+		<input type="button" value="Calcular" onclick="calcularPrecio()">
+	
+
+	</form>
+
+
+</body>
+</html>

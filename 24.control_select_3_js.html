@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<h1></h1>
+	<p><strong>Ejercicio: </strong></p>	
+	<p>Generar un presupuesto de un equipo de computación a partir de tres objetos de tipo SELECT que nos permiten seleccionar:</p>
+
+	<ul>
+		<li>Procesador (Intel I3 - $400, Intel I5 $600, Intel I7 $800).</li>
+		<li>Monitor (Samsung 20' - $250, Samsung 22' - $350, Samsung 26' - $550)</li>
+		<li>Disco Duro(500 Gb - $300, 1 Tb - $440, 3 Tb - $500)</li>
+		<li>Para cada característica indicamos string a mostrar (Ej. Intel I3) y el valor asociado a dicho string 
+		(Ej. 400). Al presionar un botón "Calcular" mostrar el presupuesto en un objeto de tipo TEXT. </li>
+	</ul>
+	
+	<hr>
+	
+	<script>
+			
+		function armarPaquete () {
+			
+			//Lamando al elemento select llamado procesadores y almacenado en una variable
+			//Se obtiene el valor opcion seleccionada y se guarda en una variable
+			var procesador = document.getElementById('procesadores');
+			var costo_procesador = procesador.options[procesador.selectedIndex].value;
+
+			var monitores = document.getElementById('monitores');
+			var costo_monitor = monitores.options[monitores.selectedIndex].value;
+
+			var disco = document.getElementById('disco');
+			var costo_disco = disco.options[disco.selectedIndex].value;
+
+			//Para poder hacer operaciones matematicas es necesario convertir a interos los valores elegidos de los 3 elementos select
+			costo_disco =parseInt(costo_disco);
+			costo_procesador = parseInt(costo_procesador);
+			costo_monitor = parseInt(costo_monitor);
+
+			var suma = costo_procesador+costo_monitor+costo_disco;
+
+			//Se llama al elemento de texto con id presupuesto y se le asigna el valor de la suma
+			document.getElementById('presupuesto').value = '$' + suma;
+
+		}
+
+
+	</script>
+
+
+	<form action="">
+		<select name="" id="procesadores">
+			<option value="400">Intel i3</option>
+			<option value="600">Intel i5</option>
+			<option value="800">Intel i7</option>
+		</select><br>
+
+		<select name="" id="monitores">
+			<option value="250">samsung 20''</option>
+			<option value="350">samsung 22''</option>
+			<option value="600">samsung 26''</option>
+		</select><br>
+
+		<select name="" id="disco">
+			<option value="300">500gb</option>
+			<option value="440">1 tb</option>
+			<option value="500">3 tb</option>
+		</select> <br>
+
+		<input type="text" id="presupuesto" >
+
+		<input type="button" onclick="armarPaquete()" value="Calcular">
+	</form>
+
+
+
+
+</body>
+</html>
