@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Textarea JavaScript</title>
+</head>
+<body>
+	
+	<h1>Control Textarea JavaScript</h1>
+
+	<p><strong>Ejercicio: </strong></p>
+	<p>Confeccionar una página de visitas a un sitio, solicitar ingresar el nombre de una persona, su mail y los comentarios (TEXTAREA). Mostrar luego llamando a la función alert los datos ingresados.</p>
+
+	<hr>
+
+	<script>
+
+		function imprimirDatos () {
+			
+			var nombre = document.getElementById('nombre').value;
+			var email = document.getElementById('email').value;
+			var comentario = document.getElementById('comentarios').value;
+
+			alert('Tus datos son: \n' + 'Nombre: ' + nombre + '\n' + 'e-mail: ' + email + '\n' +   'Comentario: ' + comentario);
+
+		}
+		
+	</script>
+
+	<form action="">
+		<label for="">Nombre: </label>
+		<input type="text" id="nombre"><br>
+
+		<label for="">e-mail:</label>
+		<input type="email" id="email"><br>
+
+		<label for="">Comentarios:</label>
+		<textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea><br>
+
+		<input type="button" value="Enviar" onclick="imprimirDatos()">
+
+
+	</form>
+
+
+</body>
+</html>

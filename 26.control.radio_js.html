@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Radio JavaScript</title>
+</head>
+<body>
+	<h1>Control Radio JavaScript</h1>
+
+	<p>Los objetos RADIO tienen sentido cuando disponemos varios elementos. Sólo uno puede estar seleccionado del conjunto.</p>
+
+	<p>Ejemplo: Mostrar cuatro objetos de tipo RADIO que permitan seleccionar los estudios que tiene un usuario:</p>
+
+	<script>
+
+		function imprimirEstudios () {
+			
+			var sin_estudios = document.getElementById('radio1');
+			var primaria = document.getElementById('radio2');
+			var secundaria = document.getElementById('radio3');
+			var preparatoria = document.getElementById('radio4');
+
+			if (sin_estudios.checked) {
+				alert('El usuario no tiene estudios academicos');
+			}
+
+			if (primaria.checked) {
+				alert('El usuario tiene la primaria');
+			}
+
+			if (secundaria.checked) {
+				alert('El usuario tiene la secundaria');
+			}
+
+			if (preparatoria.checked) {
+				alert('EL usuario tiene preparatoria');
+			}
+
+
+		}
+		
+	</script>
+	
+	<h2>Selecciona tu nivel de estudios</h2>
+
+	<form action="">	
+		
+		<label for="">Sin estudios: </label>
+		<input type="radio" id="radio1" name="nivel_academico"><br>
+		
+		<label for="">Primaria: </label>
+		<input type="radio" id="radio2" name="nivel_academico"><br>
+
+		<label for="">Secundaria: </label>
+		<input type="radio" id="radio3" name="nivel_academico"><br>
+
+		<label for="">Preparatoria </label>
+		<input type="radio" id="radio4" name="nivel_academico"><br>
+
+		<input type="button" value="Enviar" onclick="imprimirEstudios()">
+
+	</form>
+
+	
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Radio JavaScript</title>
+</head>
+<body>
+
+	<h1>Control Radio JavaScript</h1>
+	
+	<p><strong>Ejercicio: </strong><br>Confeccionar una página que muestre dos objetos de la clase RADIO solicitando que seleccione si es mayor de 18 años o no. Al presionar un botón mostrar un alert indicando si puede ingresar al sitio o no. </p>
+	
+	<hr>
+
+
+	<script>
+
+		function analizarEdad () {
+			
+			var edad_menor = document.getElementById('radio1');
+			var edad_mayor = document.getElementById('radio2');
+
+			if (edad_menor.checked) {
+				alert('Tu edad no te permite la entrada a este sitio');
+			}
+
+			if (edad_mayor.checked) {
+				alert('Bienvenido al sitio...');
+			}
+		}
+		
+	</script>
+	
+
+	<form action="">
+		
+		<label for="">Eres mayor de edad: </label><br>
+
+		<label for="">No: </label>
+		<input type="radio" id="radio1" name="edad"><br>
+
+		<label for="">Si:</label>
+		<input type="radio" id="radio2" name="edad"><br>
+
+		<input type="submit" value="Enviar" onclick="analizarEdad()">	
+
+	</form>
+
+
+</body>
+</html>

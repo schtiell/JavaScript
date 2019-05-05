@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Textarea JavaScript</title>
+</head>
+<body>
+	<h1>Control TEXTAREA JavaScript</h1>
+
+	<p>Este control es similar al control TEXT, salvo que permite el ingreso de muchas líneas de texto.</p>
+
+	<p>La etiqueta TEXTAREA en HTML tiene dos propiedades: rows y cols que nos permiten indicar la cantidad de filas y columnas a mostrar en pantalla.</p>
+
+	<p><strong>Ejemplo:</strong> <br>Solicitar la carga del mail y el curriculum de una persona. Mostrar un mensaje si el curriculum supera los 2000 caracteres.</p>
+
+	<hr>
+
+	<script>
+		
+		function analizarDatos () {
+			
+			var curriculum = document.getElementById('curriculum').value;
+
+			if (curriculum.length >= 2000) {
+
+				alert('Tu curriculum es demasiado amplio');
+			}else {
+				alert('Al parecer no cuentas con mucha experiencia');
+			}
+
+		}
+	</script>
+
+
+	<label for="">Ingresa tu curriculum e imail</label><br>
+	<textarea name="curriculum" id="curriculum" cols="30" rows="10"></textarea><br>
+
+	<input type="button" value="Enviar" onclick="analizarDatos()">
+
+	<hr>
+	<p>Para saber el largo de la cadena cargada:</p>
+
+  	<p><strong>if (curriculum.length>2000)</strong></p>
+
+  	<p>accedemos a la propiedad length.</p>
+
+
+
+</body>
+</html>

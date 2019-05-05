@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Checkbox JavaScript</title>
+</head>
+<body>
+
+	<h1>Control Checkbox JavaScript</h1>
+	
+	<p><strong>Ejercicio: </strong> <br>Confeccionar una página que muestre tres checkbox que permitan seleccionar los deportes que practica el usuario (Fútbol, Básket, Tenis) Mostrar al presionar un botón los deportes que eligió. </p>
+	
+	<hr>
+
+	<script>
+
+		function imprimirDeportes () {
+
+			var futbol = document.getElementById('futbol');
+			var basket = document.getElementById('basket');
+			var tenis = document.getElementById('tenis');
+
+			var deportes = '';
+
+			if (futbol.checked){
+				deportes = deportes +'futbol';
+			}
+
+			if (basket.checked){
+				deportes = deportes +' basket';
+			}
+
+			if (tenis.checked){
+				deportes = deportes +' tenis';
+			}
+
+			alert('Los deportes que te gustan son: ' + deportes);
+
+		}
+		
+	</script>	
+	
+	<h2>Selecciona los deportes que prefieres:</h2>
+
+	<form action="">
+		<label for="">futbol</label>	
+		<input type="checkbox" id="futbol"><br>
+		<label for="">basketball</label>
+		<input type="checkbox" id="basket"><br>
+		<label for="">Tenis</label>
+		<input type="checkbox" id="tenis"><br>
+		
+		<input type="button" value="Enviar" onclick="imprimirDeportes()">
+	</form>
+
+
+</body>
+</html>

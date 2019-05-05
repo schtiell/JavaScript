@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos onFocus y onBlur</title>
+</head>
+<body>
+
+	<h1>Eventos onFocus y onBlur</h1>
+
+	<p>El evento onFocus se dispara cuando el objeto toma foco y el evento onBlur cuando el objeto pierde el foco.</p>
+
+	<p><strong>Ejemplo:</strong></p> 
+	<p>Implementar un formulario que solicite la carga del nombre y la edad de una persona. Cuando el control tome foco borrar el contenido actual, al abandonar el mismo, mostrar un mensaje de alerta si el mismo está vacío. Mostrar en las propiedades value de los controles text los mensajes "nombre" y "mail" respectivamente.</p>
+		
+	<hr>
+
+	<script>
+		
+		function vaciar (control) {
+			
+			control.value = '';
+		}
+
+		function verificarEntrada (control) {
+
+			if (control.value == ''){
+				alert('Debes llenar los campos');
+			}
+		}
+
+	</script>
+
+	<form action="">
+		
+		<label for="">Nombre: </label>
+		<input type="text" id="nombre" onfocus="vaciar(this)" onblur="verificarEntrada(this)" value="nombre"><br>
+
+		<label for="">Edad:</label>
+		<input type="text" id="edad" onfocus="vaciar(this)" onblur="verificarEntrada(this)" value="edad"><br>
+
+		<input type="button" value="Enviar">
+
+	</form>
+	
+
+
+</p>
+	
+</body>
+</html>
