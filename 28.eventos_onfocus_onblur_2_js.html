@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos onfocus onblur javascript</title>
+</head>
+<body>
+
+	<h1>Eventos onfocus onblur javascript</h1>
+
+	<p><strong>Ejercicio: </strong><br>Solicitar que se ingrese el nombre y la clave de un usuario. Mostrar una ventana de alerta si en la clave se ingresan menos de 7 caracteres o más de 20.</p>
+	
+	<script>
+
+		function analizarNombre (control) {
+			
+			if (control.value == '') {
+
+				control.value = 'debes poener un nombre';
+			} 
+		}
+
+		function analizarPass (control) {
+			
+			if (control.value < 7 || control.value >=20) {
+
+				alert('El password es menor o mayor de la longitud permitida');
+			}
+		}
+		
+	</script>
+
+	<form action="">
+		
+		<label for="">Nombre: </label>
+		<input type="text" id="nombre" onblur="analizarNombre(this)"><br>
+		<label for="">Password: </label>
+		<input type="password" id="pass" onblur="analizarPass(this)"><br>
+		<input type="button" value="Enviar">
+		
+	</form>
+
+</body>
+</html>
