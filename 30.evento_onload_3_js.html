@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Evento onLoad</title>
+</head>
+<body onload="enfocarFormulario()">
+
+	<h1>Evento onLoad</h1>
+
+	<p>Ejemplo: Realizar un formulario que sea enfocado el primer textbox al cargar el sitio</p>
+
+	<script>
+
+		function enfocarFormulario () {
+			
+			document.getElementById('nombre').focus();
+		}
+		
+	</script>
+
+	<form action="">
+		<label for="">Nombre: </label>
+		<input type="text" id="nombre"><br>
+
+		<label for="">Contraseña: </label>
+		<input type="password" id="pass"><br>
+
+		<input type="button" value="Enviar">
+	</form>
+
+	
+</body>
+</html>
