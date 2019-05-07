@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos onMouseOver y onMouseOut</title>
+</head>
+<body>
+	
+	<h1>Eventos onMouseOver y onMouseOut</h1>
+	
+	<p><strong>Ejercicio: </strong></p>
+	<p>Otro problema que podemos probar es pinta de color el interior de una casilla de una tabla y regresar a su color original cuando salimos de la misma:</p>
+
+	<script>
+			
+		function pintar (objeto,color) {
+			
+			objeto.style.backgroundColor = color;
+		}
+
+	</script>
+	
+	<!-- Etiqueta de para abrir un script de estilos -->
+	<style>
+		 .celda{
+		 	border: 1px solid black;
+		 }
+	</style>
+
+	<table class="celda">
+		<tr>
+			<td class="celda" onmouseover="pintar(this,'#f00')" onmouseout="pintar(this,'#fff')">rojo</td>
+			<td class="celda" onmouseover="pintar(this,'#0f0')" onmouseout="pintar(this,'#fff')">verde</td> 
+			<td class="celda" onmouseover="pintar(this,'#00f')" onmouseout="pintar(this,'#fff')">azul</td>
+		</tr>
+	</table>
+
+	<p>La lógica es bastante parecida a la del primer problema, pero en éste le pasamos como parámetro a la función la referencia a la casilla que queremos que se coloree (this):</p>
+
+
+</body>
+</html>

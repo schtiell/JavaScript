@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos onMouseOver y onMouseOut</title>
+</head>
+<body>
+
+	<h1>Eventos onMouseOver y onMouseOut</h1>
+
+	<p>El evento onMouseOver se ejecuta cuando pasamos la flecha del mouse sobre un elemento HTML y el evento onMouseOut cuando la flecha abandona el mismo.</p>
+	
+	<p>Para probar estos eventos implementaremos una página que cambie el color de un cuadrado de 200px de ancho y 200px de alto.</p>
+
+	<p><strong>Ejemplo:</strong><br>Implementaremos una función que cambie el color con un valor que llegue como parámetro. Cuando retiramos la flecha del mouse volvemos a pintar de negro el fondo de cuadrado:</p>
+
+	<hr>
+
+	<script>
+		
+		function pintar (color) {
+			
+			document.getElementById('caja').style.backgroundColor = color;
+		}
+
+	</script>
+
+	<a href="#" onmouseover="pintar('#f00')" onmouseout="pintar('#000')">Rojo</a>
+	<a href="#" onmouseover="pintar('#0f0')" onmouseout="pintar('#000')">Verde</a>
+	<a href="#" onmouseover="pintar('#00f')" onmouseout="pintar('#000')">Azul</a>
+	
+	
+	<div id="caja" style="background:#000; width:200px; height:200px;"></div>
+	 
+	<hr>
+
+	<p>Las llamadas a las funciones las hacemos inicializando las propiedades onMouseOver y onMouseOut:</p>
+
+	<p>Definimos un elemento 'div' de color negro de 200 píxeles de ancho y alto:</p>
+
+	<p>La función 'pintar' recibe el color y accedemos a la propiedad 'style' y de esta a backgroundColor:</p>
+
+  	function pintar(col) <br>
+  	{ <br>
+    document.getElementById('cuadrado1').style.backgroundColor=col; <br>
+  	} <br>
+
+</body>
+</html>
