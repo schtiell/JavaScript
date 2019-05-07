@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objeto Windows JavaScript</title>
+</head>
+<body>
+
+	<h1>Objeto Windows JavaScript</h1>
+	<p><strong>Ejercicio:</strong></p>
+	<p>Confeccionar una página que permita abrir otra ventana cuando se presiona un botón. Dicha ventana debe tener como ancho 600 pixeles y alto 300 pixeles.</p>
+
+	<hr>
+
+	<script>
+
+		function abrirVentana () {
+			var ventana = open("","","status=yes, width=600, height=300, menubar=yes");
+			ventana.document.write('Esto es un mensaje de prueba para una nueva ventana');
+		}
+		
+	</script>
+
+	<form action="">
+		<label for="">Boton para abrir una nueva ventana de 600px x 300px</label><br>
+		<input type="button" value="abrir ventana" onclick="abrirVentana()">
+	</form>
+
+
+	
+</body>
+</html>

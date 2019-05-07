@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objeto Window JavaScript</title>
+</head>
+<body>
+
+	<h1>Objeto Window JavaScript</h1>
+
+	<p>Al objeto window lo hemos estado usando constantemente. Representa la ventana del navegador.
+	window es un objeto global y tiene los siguienes métodos:</p>
+
+	<ul>
+		<li>alert: Muestra un diálogo de alerta con un mensaje</li>
+		<li>prompt: Muestra un diálogo para la entrada de un valor de tipo string </li>
+		<li>confirm: Muestra un diálogo de confirmación con los botones Confirmar y Cancelar.</li>
+		<li>open y close: abre o cierra una ventana del navegador. Podemos especificar el tamaño de la ventana, su contenido, etc.</li>
+		<li>[Variable=][window.]open(URL, nombre, propiedades). Permite crear (y abrir) una nueva ventana. Si queremos tener acceso a ella desde la ventana donde la creamos, deberemos asignarle una variable, sino simplemente invocamos el método: el navegador automáticamente sabrá que pertenece al objeto window. El parámetro URL es una cadena que contendrá la dirección de la ventana que estamos abriendo: si está en blanco, la ventana se abrirá con una página en blanco. </li>
+       <li>Las propiedades son una lista, separada por comas, de algunos de los 
+       siguientes elementos: 
+			<ul>
+       			<li>toolbar[=yes|no] </li>
+       			<li>location[=yes|no] </li>
+       			<li>directories[=yes|no] </li>
+       			<li>status[=yes|no] </li>
+       			<li>menubar[=yes|no] </li>
+       			<li>scrollbars[=yes|no] </li>
+       			<li>resizable[=yes|no]</li>
+       			<li>width=pixels</li>
+       			<li>height=pixels</li>
+   			</ul>
+   		</li>
+	</ul>
+
+	<p>Es bueno hacer notar que a todas estas funciones las podemos llamar anteponiéndole el nombre del objeto window, seguida del método o en forma resumida indicando solamente el nombre del método (como lo hemos estado haciendo), esto es posible ya que el objeto window es el objeto de máximo nivel.</p>
+
+	<xmp>
+	Ej:
+	valor=window.prompt("Ingrese valor","");
+	o 
+	valor=prompt("Ingrese valor","");
+	</xmp>
+
+	<p>Para reducir la cantidad de caracteres que se tipean normalmente encontraremos los programas tipeados de la segunda forma.</p>
+	
+	<hr>
+	
+	<script>
+
+		//Abre una ventana nueva e imprime 2 lineas de texto
+		function abrir () {
+			var ventana = open();
+			ventana.document.write('Estoy abriendo un ventana nueva <br>');
+			ventana.document.write('Otra linea');
+		}
+
+
+		function abrirParametros () {
+			var ventana = open('','','status=yes, width=400, height=250, menubar=yes');
+			ventana.document.write('Esto es lo primero en aparecer<br>');
+		}
+
+		function mostrarAlerta (){
+			alert('Ejemplo de una alerta en pantalla');
+		}
+
+		function confirmar () {
+			var respuesta = confirm('presione algunos de los botones');
+			if (respuesta ==true){
+				alert('Presionó aceptar');
+			}else {
+				alert('Presionó cancelar');
+			}
+		}
+
+
+		function cargarCadena () {
+			var cadena = prompt('Escribe un mensaje','');
+			alert('Tu mensaje es: '+cadena);
+		}
+
+
+
+	</script>
+	
+
+	<form action="">
+		<input type="button" value="open()" onclick="abrir()"> <br>
+		<input type="button" value="open con parametros" onclick="abrirParametros()"><br>
+		<input type="button" value="alert" onclick="mostrarAlerta()"><br>
+		<input type="button" value="confirm" onclick="confirmar()"><br>
+		<input type="button" value="prompt" onclick="cargarCadena()">
+	</form>
+
+</body>
+</html>

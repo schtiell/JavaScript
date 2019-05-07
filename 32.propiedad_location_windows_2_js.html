@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Propiedad location del objeto window</title>
+</head>
+<body>
+
+	<h1>Propiedad location del objeto window</h1>
+	
+	<p><strong>Ejercicio:</strong></p>
+	<p>Confeccionar una página que tenga un botón. Cuando se presione dicho botón generar un valor aleatorio entre 0 y 2. Si se genera el 0 llamar al webmail de Outlook, si se genera un 1 llamar a gmail en caso de generarse un 2 llamar a yahoo. Para generar un valor aleatorio utilizar la función random del objeto Math.</p>
+
+	
+	<button onclick="abrirSitioAleatorio()">Sitio aleatorio</button>
+
+
+	<script type="text/javascript">
+
+		function abrirSitioAleatorio () {
+			
+			var sitio = parseInt(Math.random()*3);
+
+			if (sitio == 0) {
+				window.location='http:outlook.com';
+
+			}else if(sitio == 1) {
+
+				window.location='http:gmail.com';
+
+			}else if (sitio == 2) {
+				
+				window.location='http:yahoo.com';
+			}
+		}
+		
+	</script>
+
+</body>
+</html>

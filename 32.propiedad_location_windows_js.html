@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Propiedad location del objeto window</title>
+</head>
+<body>
+
+	<h1>Propiedad location del objeto window</h1>
+
+	<p>Cuando le asignamos una nueva dirección a la propiedad location del objeto window, el navegador redirecciona a dicha página.</p>
+
+	<p><strong>Ejemplo</strong></p>
+	<p>Supongamos que tenemos un botón que al ser presionado ingrese al periódico alcalorpolitico.com, pero primero muestre una ventana de confirmación, si queremos ingresar al periódico. En caso que el visitante presione el botón afirmativo, redireccionamos al sitio de La Nación, en caso contrario mostramos un mensaje:</p>
+
+	<script>
+		function abrirSitio () {
+			
+			//A diferencia de open, location no abre una nueva ventana si no que redirecciona desde la vantana actual al sitio especificado en la propiedad location del objeto window
+			var abrirSitio = confirm('Desea abrir el sitio de alcalorpolitico.com');
+
+			if (abrirSitio == true) {
+
+				window.location='http://alcalorpolitico.com';
+
+			}else {
+
+				document.write('Haz decidido no visitar el sitio de noticias de veracruz');
+
+			}
+		}
+	</script>
+
+	<form action="">
+
+		<label for="">Abir sitio alcalorpolitico.com</label><br>
+
+		<input type="button" value="alcalorpolitico.com" onclick="abrirSitio()">
+
+	</form>
+	
+	<hr>
+
+	<p>Disponemos un control HTML de tipo button y capturamos el evento onClick:</p>
+
+	<xmp>
+		<input type="button" value="alcalorpolitico.com" onclick="abrirSitio()">
+	</xmp>
+	
+	<p>La función abrirSitio() muestra la ventana con los botones confirmar y cancelar (recordar que el método confirm del objeto window hace esto en forma automática). Si se presiona el botón confirmar, la función confirm retorna true y por lo tanto se ejecuta el verdadero del if:</p>
+
+	<xmp>
+
+		if (abrirSitio == true) {
+
+				window.location='http://alcalorpolitico.com';
+
+			}else {
+
+				document.write('Haz decidido no visitar el sitio de noticias de veracruz');
+
+		}
+		
+	</xmp>
+
+</body>
+</html>
