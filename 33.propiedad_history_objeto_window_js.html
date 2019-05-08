@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Propiedad History del Objeto Window</title>
+</head>
+<body>
+
+	<h1>Propiedad History del Objeto Window</h1>
+
+	<img src="imgs/window_object.jpeg" alt="window object">
+
+	<p>El objeto history colabora directamente con el objeto window:</p>
+
+	<p>El objeto history almacena todas las páginas que visitamos. Luego, con una serie de funciones, podemos extraer de la memoria de la computadora las páginas ya visitadas, sin tener que pedirlas nuevamente al servidor.</p>
+
+	<p>Cuenta con las siguientes funciones:</p>
+
+	<xmp>
+		window.history.back();    	//Retrocede a la página anterior
+  		window.history.forward(); 	//Avanza a la página siguiente almacenada en la cache de la máquina.
+  		window.history.go();  		//Avanza o retrocede en la lista de páginas visitadas.
+	</xmp>
+
+	<p>Llamar a la función back, tiene el mismo comportamiento que presionar el botón "Atrás" del navegador.</p>
+
+	<p>El siguiente ejemplo nos permite cargar una segunda página y luego retroceder a la primera página sin tener que solicitarla nuevamente al servidor:</p>
+
+	<hr>	
+
+	<p><strong>Resultado del ejercicio</strong></p>
+
+	<script type="text/javascript">
+		
+		function avanzar () {
+
+			//Revisa la propiedad history del objeto window si hay historial ejecuta la instruccion
+			if (window.history.length>0){
+
+				window.history.go(1);
+
+			}else{
+
+				alert('No hay paginas almacenadas en caché');
+			}
+		}
+
+	</script>
+	
+	<a href="33.propiedad_history_2.html">Ir a la página</a>
+	<br>
+	<br>
+	<a href="javascript:avanzar()">Extraer del caché la segunda página</a>
+	
+	<hr>
+
+	<p>En la segunda página, mediante el método go y pasándole un valor negativo, retrocedemos a la primera página sin tener la necesidad de recargarla. </p>	
+
+	<p>Podemos mejorar el ejemplo accediendo al atributo length (almacena la cantidad de páginas de la lista) del objeto history:</p>
+	
+</body>
+</html>
