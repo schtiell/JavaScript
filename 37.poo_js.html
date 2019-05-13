@@ -1,0 +1,84 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Programación Orientada a Objetos en JavaScript</title>
+</head>
+<body>
+
+	<h1>Programación Orientada a Objetos en JavaScript</h1>
+
+	<p>El lenguaje JavaScript no es un lenguaje orientado a objetos completo, pero permite definir clases con sus atributos y responsabilidades. Luego nos permite definir objetos de estas clases.</p>
+
+	<p>Pero el otro pilar de la programación orientada a objetos, es decir la herencia, recién se incorporó en las últimas versiones (lo veremos más adelante)</p>
+
+	<p>Veremos la sintaxis para la declaración de una clase y la posterior definición de objetos de la misma.</p>
+
+	<p>Desarrollaremos una clase que represente un cliente de un banco. La clase Cliente tiene como atributos:</p>
+
+	<ul>
+		<li>cliente</li>
+		<li>saldo</li>
+	</ul>
+
+	<p>y las responsabilidades o métodos de la clase son:</p>
+
+	<ul>
+		<li>Constructor (inicializamos los atributos del objeto)</li>
+		<li>depositar</li>
+		<li>retirar</li>
+	</ul>
+
+	<p>Luego debemos implementar los siguientes métodos (normalmente el constructor se utiliza el caracter mayúscula):</p>
+	
+	<xmp>
+		<script>
+		  function Cliente(nombre,saldo)
+		  {
+		    this.nombre=nombre;
+		    this.saldo=saldo;
+		    this.depositar=depositar;
+		    this.extraer=extraer;
+		  }
+
+		  function depositar(dinero)
+		  {
+		    this.saldo=this.saldo+dinero;
+		  }
+
+		  function extraer(dinero)
+		  {
+		    this.saldo=this.saldo-dinero;
+		  }
+
+		  var cliente1;
+		  cliente1=new Cliente('diego',1200);
+		  document.write('Nombre del cliente:'+cliente1.nombre+'<br>');
+		  document.write('Saldo actual:'+cliente1.saldo+'<br>');
+		  cliente1.depositar(120);
+		  document.write('Saldo luego de depositar $120---->'+cliente1.saldo+'<br>');
+		  cliente1.extraer(1000);
+		  document.write('Saldo luego de extraer $1000---->'+cliente1.saldo+'<br>'); 
+		</script>
+	</xmp>>	
+
+	<p>Para definir un objeto de la clase Cliente tenemos:</p>
+
+  	<p>var cliente1;
+  	cliente1=new Cliente('diego',1200);
+	Luego las llamadas a métodos le antecedemos el nombre del objeto llamado cliente1:</p>
+	
+	<xmp>
+		document.write('Nombre del cliente:'+cliente1.nombre+'<br>');
+		document.write('Saldo actual:'+cliente1.saldo+'<br>');
+		cliente1.depositar(120);
+		document.write('Saldo luego de depositar $120---->'+cliente1.saldo+'<br>');
+		cliente1.extraer(1000);
+		document.write('Saldo luego de extraer $1000---->'+cliente1.saldo+'<br>');
+	</xmp>
+	
+	<p>Podemos decir que la ventaja que podemos obtener con el planteo de clases es hacer nuestros programas mucho más organizados, entendibles y fundamentalmente poder reutilizar clases en distintos proyectos.</p>
+	
+	
+</body>
+</html>

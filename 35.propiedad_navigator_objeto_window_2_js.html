@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Propiedad Navigator del Objeto Window JavaScript</title>
+</head>
+<body onload="infoCookies()">
+	
+	<h1>Propiedad Navigator del Objeto Window JavaScript</h1>
+
+	<p><strong>Ejercicio: </strong></p>
+	<p>Una vez que se cargue la página mostrar un alert indicando si el navegador tiene activas las cookies.</p>
+
+	<hr>
+
+	<script type="text/JavaScript">
+		
+		function infoCookies () {
+
+			if (navigator.cookieEnabled == true){
+				alert('Las cookies del navegador estan activadas');
+			}else {
+				alert(navigator.cookieEnabled);
+			}
+			
+		}
+
+	</script>
+
+
+
+</body>
+</html>

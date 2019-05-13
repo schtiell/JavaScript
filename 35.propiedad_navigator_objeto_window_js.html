@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Propiedad Navigator del Objeto Window JavaScript</title>
+</head>
+<body>
+
+	<h1>Propiedad Navigator del Objeto Window JavaScript</h1>
+
+	<p>Contiene información sobre el navegador web. La implementación de este objeto varía entre navegadores (Chrome, Edge, IExplorer, FireFox, Opera, etc.)</p>
+
+	<img src="imgs/window_object.jpeg" alt="window_object">
+	
+	<p>Las propiedades comunes a estos navegadores son:	</p>
+	
+	<ul>
+		<li>appName : almacena el nombre oficial del navegador.</li>
+		<li>appVersion : almacena la versión del navegador.</li>
+		<li>cookieEnabled : almacena si las cookies están activas en el navegador.</li>
+		<li>platform : almacena la plataforma donde el navegador se está ejecutando.</li>	
+		<li>plugins : almacena un array de los plugin cargados en el navegador.</li>
+	</ul>
+	
+	<p><strong>Ejemplo: </strong></p>
+
+	<p>Este pequeño programa muestra los valores de las propiedades antes anunciadas:</p>
+
+	<hr>
+	
+	<p><strong>Resultado: </strong></p>
+
+	<script type="text/JavaScript">
+		
+		document.write('Los valores de las propiedades del objeto Navigator son: <br>');
+		document.write('appName: ' + navigator.appName + '<br>');
+		document.write('appVersion: ' + navigator.appVersion + '<br>');
+		document.write('cookieEnabled: ' + navigator.cookieEnabled + '<br>');
+		document.write('platform: ' + navigator.platform + '<br>');
+		document.write('plugins: ' + navigator.plugins + '<br>');
+
+	</script>
+	
+</body>
+</html>

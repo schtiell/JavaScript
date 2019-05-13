@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Archivo externo JavaScript</title>
+</head>
+<body>
+	
+	<h1>Archivo externo JavaScript (*.js)</h1>
+
+	<p>El lenguaje JavaScript permite agrupar funciones y disponerlas en un archivo separado a la página HTML. </p>
+
+	<p>Esto trae muchos beneficios.</p>
+
+	<ul>
+		<li>Reutilización de funciones de uso común. No tenemos que copiar y pegar sucesivamente las funciones en las páginas en las que necesitamos.</li>
+		<li>Facilita el mantenimiento de las funciones al encontrarse en archivos separados.</li>
+		<li>Nos obliga a ser más ordenados.</li>
+	</ul>
+	
+	<p>La mecánica para implementar estos archivos externos en JavaScript es:</p>
+
+	<ol>
+		<li>Crear un archivo con extensión *.js y tipear las funciones en la misma.</li>
+		<li>Creamos un archivo html que utilizará las funciones contenidas en el archivo *.js:</li>
+	</ol>
+
+	<p>Es decir debemos disponer el siguiente código para importar el archivo *.js: 
+		<xmp><script src="funciones.js"></script></xmp></p>
+
+	<p>Mediante la propiedad 'src' indicamos el nombre del archivo a importar.</p>
+
+	<p>Luego, podemos llamar dentro de la página HTML, a las funciones que contiene el archivo externo funciones.js; en nuestro ejemplo llamamos a las funciones retornarFecha() y retornarHora().</p>
+
+	<p>Como podemos ver, el archivo html queda mucho más limpio.</p>
+
+	<p>Es importante notar que primero se importa el archivo 'funciones.js' y recién podemos llamar a las funciones contenidas.</p>
+
+</body>
+</html>
