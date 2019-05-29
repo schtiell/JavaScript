@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/JavaScript" src=""></script>
+	<title>Programación Orientada a Objetos en JavaScript</title>
+</head>
+<body>
+	
+	<h1>Programación Orientada a Objetos en JavaScript</h1>
+
+	<p><strong>Ejemplo: </strong>Confeccionar una clase llamada suma, que contenga dos atributos (valor1, valor2) y tres métodos: cargarvalor1, cargarvalor2 y retornarresultado. Implementar la clase suma.
+	La definición de un objeto de la clase que deben plantear es:</p>
+
+	<script>
+		
+		//Definición de la clase Suma con Mayúscula
+		function Suma (numero1, numero2) {
+
+			//Declaración de los Atributos  de la clase
+			this.numero1 = numero1;
+			this.numero2 = numero2;
+			this.asignarPrimerValor = asignarPrimerValor;
+			this.asignarSegundoValor = asignarSegundoValor;
+			this.retornarresultado = retornarresultado;
+		}
+			//Metodos de la clase Suma
+		function asignarPrimerValor (numero1) {
+			this.numero1 = numero1;
+		}
+
+		function asignarSegundoValor (numero2) {
+			this.numero2 = numero2;
+		}
+
+		function retornarresultado () {
+				return this.numero1 + this.numero2;
+		}
+
+
+		//Instancia de la clase Suma
+		
+		var numero1 = parseInt(prompt('Primer valor a sumar: '));
+		var numero2 = parseInt(prompt('Segundo valor a sumar: '));
+		
+		var sumar = new Suma(numero1,numero2);
+
+		//Llamado a un metodo de la clase Suma el cual retorna el resultado
+		document.write('La suma de los valores es: ' + sumar.retornarresultado() + '<br>');
+		sumar.asignarPrimerValor(30);
+		sumar.asignarSegundoValor(50);
+		document.write('El Primer valor es: ' + sumar.numero1 + '<br>');
+		document.write('El Segundo valor es: ' + sumar.numero2 + '<br>');
+		document.write('La suma de los valores es: ' + sumar.retornarresultado() + '<br>');
+
+
+	</script>	
+
+</body>
+</html>
