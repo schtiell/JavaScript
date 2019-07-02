@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arreglos No densos o Dispersos en JavaScript</title>
+</head>
+<body>
+	<h1>Arreglos No Densos o Dispersos en JavaScript</h1>
+	<p>Hasta ahora siempre que inicializamos los array no dejamos espacios sin utilizar. Javascript permite crear array e inicializar componentes no contiguas.</p>
+	<p>Por ejemplo podemos crear un vector e inicializar las componentes con subíndice 5 y 10:</p>
+	<pre>
+	var vec=[];
+  	vec[5]=100;
+  	vec[10]=200;
+  	</pre>
+  	<p>Este tipo de array se los llama array dispersos ya que no tenemos todas las componentes contiguas ocupadas. Veamos con un ejemplo que pasa con la propiedad length y cuando accedemos a componentes que no existen en el vector:</p>
+  	<hr>
+
+  	<script type="text/JavaScript" src="js/44.arreglos_nodensos_o_dispersos_js.js"></script>
+
+  	<p>Como podemos ver el atributo length almacena teniendo en cuenta la posición más grande asignada (en nuestro ejemplo vec[10])</p>
+  	<p>Por otro lado cuando accedemos a componentes no inicializadas obtenemos el valor "undefined".</p>
+  	<p>Es bueno tener en cuenta que las componentes no inicializadas no reservan espacio en memoria, luego si asignamos como subíndice el dni de una persona:</p>
+  	<pre>dni[20438470]=100;</pre>
+  	<p>no significa que se reservan más de veinte millones de componentes para los otros elementos del vector. La reserva de espacio sucede a medida que ocupamos espacios del vector.</p>
+
+</body>
+</html>
