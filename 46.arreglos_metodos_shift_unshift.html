@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array: métodos unshift y shift</title>
+</head>
+<body>
+
+	<h1>Array: métodos unshift y shift</h1>
+
+	<p>Así como el método push inserta un elemento al final del vector el método unshift inserta un elemento al principio del vector y desplaza el resto una posición.</p>
+
+	<p>El método shift extrae el primer elemento del vector y desplaza hacia delante el resto de elementos del vector.</p>
+
+	<p><strong>Problema</strong></p>
+
+	<p>Ingresar valores por teclado. Los valores menores a 100 ingresarlos al principio del vector y los mayores o iguales a 100 ingresarlos al final. Se finaliza la carga de datos al ingresar el cero. Cuando sale del do/while extraer el último valor ingresado que es el cero del vector. Imprimir el vector en la página</p>
+
+	<script src="js/46.arreglos_metodos_shift_unshift.js" type="text/javascript"></script>
+
+	<p>Si el valor es menor a 100 procedemos a llamar al método unshift que lo inserta al principio del vector en caso contrario se inserta al final mediante el método push:</p>
+	
+	<pre>
+	if (valor<100)
+    {
+      vec.unshift(valor);
+    }
+    else
+    {
+      vec.push(valor);
+    }
+	</pre>
+
+	<p>Fuera del do/while procedemos a extraer el primer elemento del vector que es el cero:</p>
+
+	<pre>vec.shift();</pre>
+
+	<p>Finalmente procedemos a imprimir en forma completa el vector:</p>
+
+	<pre>
+		for(f=0;f < vec.length;f++)
+  		{
+    		document.write(vec[f]+'< br>');
+  		}
+	</pre>
+	
+</body>
+</html>

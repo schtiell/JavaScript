@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrays métodos push y pop</title>
+</head>
+<body>
+	<h1>Arrays métodos push y pop</h1>
+
+	<p>Como los Array en Javascript son objetos, los mismos tienen una serie de métodos que nos facilitan trabajar con ellos.</p>
+
+	<p>Para insertar elementos en un vector hemos visto que con solo asignar un valor al vector en un determinado índice el dato queda almacenado y eventualmente el atributo length modificado:</p>
+
+	<pre>
+		var vec=[];
+  		vec[0]=10;
+  		vec[1]=20;  
+  		document.write(vec.length);  //imprime 2
+  	</pre>
+
+  	<p>Esta sintaxis tenemos que tener cuidado como variamos el subíndice para no dejar componentes vacías si queremos implementar un array denso.</p>
+  	
+  	<p>Una variante para resolver este mismo problema es utilizar el método push del objeto Array. Este método añade el valor al final del vector:</p>
+  	
+  	<pre>
+  		var vec=[];
+  		vec.push(10);
+  		vec.push(20);  
+  		document.write(vec.length);  //imprime 2
+  	</pre>
+  	
+  	<p>Automáticamente cuando llamamos al método push el valor que le pasamos en el parámetro se almacena en el vector y se incrementa el atributo length.</p>
+  	
+  	<p>Podemos inclusive llamar al método push pasando más de 1 parámetro:</p>
+  	
+  	<pre>
+  		var vec=[];
+  		vec.push(10,20);
+  		document.write(vec.length);  //imprime 2
+  	</pre>
+  	
+  	<p>El método inverso llamado pop extrae el último elemento del Array y decrementa en uno el atributo length:</p>
+  	
+  	<pre>
+  	  var vec=[];
+	  vec.push(10,20,30,40);  
+	  document.write(vec.length+'&ltbr&gt');  //imprime 4
+	  vec.pop();
+	  document.write(vec.length+'&ltbr&gt');  //imprime 3
+	  document.write(vec.pop()+'&ltbr&gt');   //imprime un 30
+	  document.write(vec.length+'&ltbr&gt');  //imprime 2
+  	</pre>
+  	
+  	<p>El método pop() además de eliminar el último elemento del vector retorna el valor almacenado en dicha componente.</p>
+  	
+  	<p>Si llamamos al método pop y el vector está vacío retorna el valor undefined.</p>
+
+  	<p><strong>Ejercicio: </strong></p>
+
+  	<p>Realizar la carga de sueldos por teclado hasta que se ingrese el cero. Almacenar todos los valores ingresados en un vector empleando el método push. Mostrar la suma de sueldos ingresados.</p>
+
+  	<script src="js/45.arreglos_metodos_push_pop.js" type="text/javascript"></script>
+	
+</body>
+</html>
